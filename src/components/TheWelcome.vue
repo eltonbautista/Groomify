@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Hello World</div>
+  <section class="introduction">
+    <div>Hello World</div>
+  </section>
 </template>
