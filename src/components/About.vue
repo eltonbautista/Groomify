@@ -69,6 +69,8 @@ import image from "../assets/DoggoAbout.png"
     display: grid;
     grid-area: 1/1;
     padding-top: 6em;
+    align-items: center;
+    justify-content: center;
 
     img {
         height: 25em
