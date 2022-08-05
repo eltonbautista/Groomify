@@ -29,12 +29,13 @@ export default defineComponent({
 .nav-link {
   font-size: var(--font-size-base);
   color: var(--color-text-main);
+  text-shadow: 0 1px 4px black;
 }
 
 .nav-item.groomify .nav-link {
   font-size: calc(var(--font-size-lg) + 0.5em);
-  /* font-style: italic; */
-  font-weight: 900;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  text-shadow: 0 3px 5px gray;
+  font-family: Pattaya, RHD, sans-serif;
 }
 </style>
