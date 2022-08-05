@@ -53,6 +53,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
 @font-face {
   font-family: RHD;
   src: url("../assets/RedHatDisplay-Regular.ttf");
@@ -64,10 +69,15 @@ h6 {
   src: url("../assets/RedHatDisplay-Light.ttf");
 }
 
+@font-face {
+  font-family: Pattaya;
+  src: url("../assets//Pattaya-Regular.ttf");
+}
 
+/* Gotta play with this */
 #app {
-  min-width: 100vw;
-  min-height: 100vh;
+  /* min-width: 100vw; */
+  min-height: 100%;
 }
 
 #root,

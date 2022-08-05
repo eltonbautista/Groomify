@@ -30,6 +30,9 @@ import ContactButton from "./ContactButton.vue";
         </div>
       </div>
     </div>
+    <div class="main-headline-image"></div>
+    <div class="accent-one"></div>
+    <div class="accent-two"></div>
   </section>
 </template>
 
@@ -38,16 +41,6 @@ import ContactButton from "./ContactButton.vue";
   padding-top: 3em;
   background-color: var(--bg-color-v1);
   min-height: 100vh;
-}
-.headline-buttons-wrap {
-  display: grid;
-}
-
-.headline-buttons-wrap > div {
-  display: grid;
-  width: 75%;
-  gap: 0.5em;
-  justify-self: center;
 }
 
 .main-headline-text {
@@ -59,7 +52,7 @@ import ContactButton from "./ContactButton.vue";
 }
 
 .main-headline-text > h1 {
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 .main-headline-text > h1 > span {
@@ -70,10 +63,65 @@ import ContactButton from "./ContactButton.vue";
 }
 
 .main-headline-text > p {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 .main-headline-text > p > span {
   font-size: var(--font-size-base);
+}
+
+.headline-buttons-wrap {
+  display: grid;
+}
+
+.headline-buttons-wrap > div {
+  display: grid;
+  width: 75%;
+  gap: 0.5em;
+  justify-self: center;
+}
+
+.main-headline-image {
+  grid-area: 1/6/10/10;
+  background-image: url("../assets/hero-dog.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 -1em;
+  z-index: 1;
+}
+
+.accent-one {
+  grid-area: 1/8/3/10;
+  z-index: 0;
+  background-color: var(--color-text-sub);
+  max-height: 90%;
+  max-width: 80%;
+  margin-top: 3em;
+}
+
+.accent-two {
+  grid-area: 1/8/3/10;
+  z-index: 0;
+  border: 1px solid black;
+  border-left: none;
+  margin-top: 0.25em;
+}
+
+@media (max-width: 1440px) {
+  .main-headline-image {
+    background-size: 110%;
+  }
+
+  .accent-one {
+    min-height: 0;
+    max-height: 77%;
+    max-width: 100%;
+  }
+
+  .accent-two {
+    grid-area: 1/8/3/11;
+    max-width: 75%;
+    max-height: 88.5%;
+  }
 }
 </style>
