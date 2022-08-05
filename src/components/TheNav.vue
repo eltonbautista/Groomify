@@ -13,7 +13,7 @@ export default defineComponent({
 
 <template>
   <nav id="nav">
-    <NavLinks link-name="Groomify" />
+    <NavLinks link-name="Groomify" class="groomify" />
     <div class="navigation-wrapper">
       <NavLinks v-for="(link, index) in links" :key="index" :link-name="link" />
     </div>

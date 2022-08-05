@@ -28,5 +28,13 @@ export default defineComponent({
 
 .nav-link {
   font-size: var(--font-size-base);
+  color: var(--color-text-main);
+}
+
+.nav-item.groomify .nav-link {
+  font-size: calc(var(--font-size-lg) + 0.5em);
+  /* font-style: italic; */
+  font-weight: 900;
+  letter-spacing: 0.05em;
 }
 </style>
