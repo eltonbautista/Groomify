@@ -10,9 +10,7 @@ import TheWelcome from "@/components/TheWelcome.vue";
 
 <style lang="scss" scoped>
 main {
-  max-width: 80vw;
+  display: grid;
   min-height: 100%;
-  padding: 1em;
-  margin: auto;
 }
 </style>
