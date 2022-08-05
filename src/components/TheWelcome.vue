@@ -3,48 +3,64 @@ import ContactButton from "./ContactButton.vue";
 </script>
 
 <template>
-  <section class="hero">
-    <div class="main-headline-text">
-      <h1>
-        <span><em>Woof</em> there ever be a</span>
-        <span> better time than <em>m</em></span>
-        <span><em>eow?</em> <em>Grrrive</em> them a</span>
-        <span>n experience th</span>
-        <span>ey deserve. They <em>arf</em> yo</span>
-        <span>ur best friend after all!</span>
-      </h1>
-      <p>
-        <span
-          >We are not <em>kitten</em> you when we say your furry friends will be
-          receiving the best of the best.</span
-        >
-        <span>&nbsp;<em>Pup</em> down to locations now! </span>
-      </p>
-      <div class="headline-buttons-wrap">
-        <div>
-          <ContactButton
-            button-text="Book a Visit &nbsp; &rarrw;"
-            class="black"
-          />
-          <ContactButton button-text="Contact Us &nbsp; &#9990;" class="pink" />
+  <section class="container">
+    <div class="hero">
+      <div class="main-headline-text">
+        <h1>
+          <span><em>Woof</em> there ever be a</span>
+          <span> better time than <em>m</em></span>
+          <span><em>eow?</em> <em>Grrrive</em> them a</span>
+          <span>n experience th</span>
+          <span>ey deserve. They <em>arf</em> yo</span>
+          <span>ur best friend after all!</span>
+        </h1>
+        <p>
+          <span
+            >We are not <em>kitten</em> you when we say your furry friends will
+            be receiving the best of the best.</span
+          >
+          <span>&nbsp;<em>Pup</em> down to locations now! </span>
+        </p>
+        <div class="headline-buttons-wrap">
+          <div>
+            <ContactButton
+              button-text="Book a Visit &nbsp; &rarrw;"
+              class="black"
+            />
+            <ContactButton
+              button-text="Contact Us &nbsp; &#9990;"
+              class="pink"
+            />
+          </div>
         </div>
       </div>
+      <div class="main-headline-image"></div>
+      <div class="accent-one"></div>
+      <div class="accent-two"></div>
     </div>
-    <div class="main-headline-image"></div>
-    <div class="accent-one"></div>
-    <div class="accent-two"></div>
   </section>
 </template>
 
 <style lang="scss" scoped>
+.container {
+  background-color: var(--bg-color-v1);
+  min-width: 100%;
+  min-height: 100%;
+}
 .hero {
   padding-top: 3em;
   background-color: var(--bg-color-v1);
   min-height: 100vh;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-area: 1/1/2/13;
+  margin: auto;
+  grid-template-rows: repeat(1, 1fr);
 }
 
 .main-headline-text {
-  grid-area: 1/3/2/6;
+  grid-area: 1/1/2/6;
 }
 
 .main-headline-text em {
@@ -94,7 +110,7 @@ import ContactButton from "./ContactButton.vue";
   grid-area: 1/8/3/10;
   z-index: 0;
   background-color: var(--color-text-sub);
-  max-height: 90%;
+  max-height: 60%;
   max-width: 80%;
   margin-top: 3em;
 }
@@ -105,6 +121,7 @@ import ContactButton from "./ContactButton.vue";
   border: 1px solid black;
   border-left: none;
   margin-top: 0.25em;
+  max-height: 70%;
 }
 
 @media (max-width: 1440px) {

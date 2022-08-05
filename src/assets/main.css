@@ -59,21 +59,6 @@ a:hover {
   cursor: pointer;
 }
 
-/* @font-face {
-  font-family: RHD;
-  src: url("../assets/RedHatDisplay-Regular.ttf");
-}
-
-@font-face {
-  font-family: RHDL;
-  src: url("../assets/RedHatDisplay-Light.ttf");
-} */
-
-/* @font-face {
-  font-family: Pattaya;
-  src: url("../assets//Pattaya-Regular.ttf");
-} */
-
 /* Gotta play with this */
 #app {
   /* min-width: 100vw; */
