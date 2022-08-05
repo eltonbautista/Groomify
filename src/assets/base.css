@@ -14,6 +14,11 @@
   --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
   --font-size-xl: clamp(2.84rem, 2.68vw + 2.05rem, 2.05rem);
+
+  --common-font-family: 'Red Hat Display', sans-serif;
+  --brand-font-family: 'Pattaya', sans-serif;
+
+  --max-width: 87.5em
 }
 
 *,
