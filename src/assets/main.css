@@ -53,6 +53,18 @@ h6 {
   overflow-wrap: break-word;
 }
 
+@font-face {
+  font-family: RHD;
+  src: url("../assets/RedHatDisplay-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: RHDL;
+  src: url("../assets/RedHatDisplay-Light.ttf");
+}
+
+
 #app {
   min-width: 100vw;
   min-height: 100vh;

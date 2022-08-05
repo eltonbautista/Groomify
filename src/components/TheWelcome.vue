@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ContactButton from "./ContactButton.vue";
+</script>
 
 <template>
   <section class="hero">
@@ -19,8 +21,13 @@
         <span>&nbsp;<em>Pup</em> down to locations now! </span>
       </p>
       <div class="headline-buttons-wrap">
-        <button>Sign up</button>
-        <button>Get in touch</button>
+        <div>
+          <ContactButton
+            button-text="Book a Visit &nbsp; &rarrw;"
+            class="black"
+          />
+          <ContactButton button-text="Contact Us &nbsp; &#9990;" class="pink" />
+        </div>
       </div>
     </div>
   </section>
@@ -29,15 +36,26 @@
 <style lang="scss" scoped>
 .hero {
   padding-top: 3em;
+  background-color: var(--bg-color-v1);
+  min-height: 100vh;
 }
+.headline-buttons-wrap {
+  display: grid;
+}
+
+.headline-buttons-wrap > div {
+  display: grid;
+  width: 75%;
+  gap: 0.5em;
+  justify-self: center;
+}
+
 .main-headline-text {
   grid-area: 1/3/2/6;
-  display: grid;
-  gap: 2em;
 }
 
 .main-headline-text em {
-  color: var(--color-text-accent);
+  color: var(--color-text-sub);
 }
 
 .main-headline-text > h1 {
@@ -48,7 +66,13 @@
   font-size: 50px;
   box-sizing: border-box;
   letter-spacing: 0.025em;
+  line-height: 1.2;
 }
+
+.main-headline-text > p {
+  padding-bottom: 1em;
+}
+
 .main-headline-text > p > span {
   font-size: var(--font-size-base);
 }

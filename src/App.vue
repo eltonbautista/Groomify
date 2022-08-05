@@ -14,6 +14,6 @@ import TheNav from "./components/TheNav.vue";
 </template>
 <style lang="scss" scoped>
 .wrapper {
-  background: black;
+  background: var(--bg-color-v1);
 }
 </style>
