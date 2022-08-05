@@ -28,8 +28,11 @@ export default defineComponent({
 
 .nav-link {
   font-size: var(--font-size-base);
-  color: var(--color-text-main);
-  text-shadow: 0 1px 4px black;
+  color: var(--color-text-sub);
+  /* font-family: RHDB; */
+  letter-spacing: 1px;
+  /* font-weight: 900; */
+  /* text-shadow: 0 1px 4px black; */
 }
 
 .nav-item.groomify .nav-link {

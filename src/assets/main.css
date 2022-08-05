@@ -63,10 +63,14 @@ a:hover {
   src: url("../assets/RedHatDisplay-Regular.ttf");
 }
 
-
 @font-face {
   font-family: RHDL;
   src: url("../assets/RedHatDisplay-Light.ttf");
+}
+
+@font-face {
+  font-family: RHDB;
+  src: url("../assets/RedHatDisplay-Bold.ttf");
 }
 
 @font-face {
