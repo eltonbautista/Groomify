@@ -30,6 +30,7 @@ import image from "../assets/DoggoAbout.png"
 <style lang="scss" scoped>
 .container {
     height: 100%;
+    width: 100%;
     margin: auto;
     background-color: #f1f1f1;
     padding-top: 2em;
@@ -43,14 +44,14 @@ import image from "../assets/DoggoAbout.png"
 
     p {
         .top-span {
-            font-size: 2.2em;
-            letter-spacing: 0.032em;
+            font-size: 4em;
+            letter-spacing: 0.0798em;
+
         }
 
         .bottom-span {
-            font-size: 1.7em;
-
-            letter-spacing: 0.019em;
+            font-size: 3em;
+            letter-spacing: 0.080em;
         }
     }
 
