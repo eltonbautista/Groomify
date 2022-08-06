@@ -11,9 +11,11 @@
 
   --bg-color-v1: #FFC3BB;
   --bg-color-about: #F1F1F1;
+
+  --font-size-sm: clamp(0.87rem, 0.14vw + 0.67rem, 1rem);
   --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-  --font-size-xl: clamp(2.84rem, 2.68vw + 2.05rem, 2.05rem);
+  --font-size-xl: clamp(2.84rem, 2.68vw + 2.05rem, 3.15rem);
 
   --common-font-family: 'Red Hat Display', sans-serif;
   --brand-font-family: 'Pattaya', sans-serif;
