@@ -4,12 +4,18 @@ import { defineComponent } from "vue";
 export default defineComponent({
   props: {
     buttonText: String,
+    backgroundColor: String,
+    textColor: String,
   },
 });
 </script>
 
 <template>
-  <button class="contact-button">
+
+  <button class="contact-button" :style="{
+    'background-color': backgroundColor,
+    'color': textColor
+  }">
     {{ buttonText }}
   </button>
 </template>
@@ -22,14 +28,5 @@ export default defineComponent({
   border-radius: 4px;
   padding: 0.35em 0em;
   line-height: 2;
-}
-.black {
-  background-color: var(--color-text-main);
-  color: var(--bg-color-v1);
-}
-
-.pink {
-  background-color: var(--color-text-sub);
-  color: var(--color-text-main);
 }
 </style>

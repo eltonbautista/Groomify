@@ -15,22 +15,16 @@ import ContactButton from "./ContactButton.vue";
           <span>ur best friend after all!</span>
         </h1>
         <p>
-          <span
-            >We are not <em>kitten</em> you when we say your furry friends will
-            be receiving the best of the best.</span
-          >
+          <span>We are not <em>kitten</em> you when we say your furry friends will
+            be receiving the best of the best.</span>
           <span>&nbsp;<em>Pup</em> down to locations now! </span>
         </p>
         <div class="headline-buttons-wrap">
           <div>
-            <ContactButton
-              button-text="Book a Visit &nbsp; &rarrw;"
-              class="black"
-            />
-            <ContactButton
-              button-text="Contact Us &nbsp; &#9990;"
-              class="pink"
-            />
+            <ContactButton button-text="Book a Visit &nbsp; &rarrw;" background-color="var(--color-text-main)"
+              text-color="var(--bg-color-v1)" />
+            <ContactButton button-text="Contact Us &nbsp; &#9990;" background-color="var(--color-text-sub)"
+              text-color="var(--color-text-main)" />
           </div>
         </div>
       </div>
@@ -46,6 +40,7 @@ import ContactButton from "./ContactButton.vue";
   background-color: var(--bg-color-v1);
   width: 100%;
 }
+
 .hero {
   padding-top: 3em;
   background-color: var(--bg-color-v1);
@@ -65,22 +60,22 @@ import ContactButton from "./ContactButton.vue";
   color: var(--color-text-sub);
 }
 
-.main-headline-text > h1 {
+.main-headline-text>h1 {
   padding-bottom: 1.5em;
 }
 
-.main-headline-text > h1 > span {
+.main-headline-text>h1>span {
   font-size: 50px;
   box-sizing: border-box;
   letter-spacing: 0.025em;
   line-height: 1.2;
 }
 
-.main-headline-text > p {
+.main-headline-text>p {
   padding-bottom: 2em;
 }
 
-.main-headline-text > p > span {
+.main-headline-text>p>span {
   font-size: var(--font-size-base);
 }
 
@@ -88,7 +83,7 @@ import ContactButton from "./ContactButton.vue";
   display: grid;
 }
 
-.headline-buttons-wrap > div {
+.headline-buttons-wrap>div {
   display: grid;
   width: 75%;
   gap: 0.5em;
