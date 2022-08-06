@@ -12,7 +12,7 @@ export default defineComponent({
 
 <template>
 
-  <button class="contact-button" :style="{
+  <button class="button" :style="{
     'background-color': backgroundColor,
     'color': textColor
   }">
@@ -21,7 +21,7 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-.contact-button {
+.button {
   font-size: calc(var(--font-size-base) + 0.2em);
   border: none;
   font-weight: 900;

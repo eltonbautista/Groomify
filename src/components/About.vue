@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import image from "../assets/DoggoAbout.png"
-import ContactButton from "./ContactButton.vue";
+import Button from "./Button.vue";
 </script>
 
 <template>
@@ -19,8 +19,8 @@ import ContactButton from "./ContactButton.vue";
                         they’re important to us too.</p>
                 </div>
 
-                <div class="button">
-                    <ContactButton button-text="Contact Us &nbsp; &#9990;" background-color="var(--color-text-accent)"
+                <div class="button-container">
+                    <Button button-text="Contact Us &nbsp; &#9990;" background-color="var(--color-text-accent)"
                         text-color="var(--color-text-main)" />
                 </div>
 
@@ -124,7 +124,6 @@ import ContactButton from "./ContactButton.vue";
 
     .top {
 
-
         p {
 
             font-size: 50px;
@@ -145,12 +144,12 @@ import ContactButton from "./ContactButton.vue";
         }
     }
 
-    .button {
+    .button-container {
         display: flex;
         justify-content: center;
         padding-top: 5.9390rem;
 
-        .contact-button {
+        .button {
             width: 290px;
         }
     }

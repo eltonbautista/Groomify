@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ContactButton from "./ContactButton.vue";
+import Button from "./Button.vue";
 </script>
 
 <template>
@@ -21,9 +21,9 @@ import ContactButton from "./ContactButton.vue";
         </p>
         <div class="headline-buttons-wrap">
           <div>
-            <ContactButton button-text="Book a Visit &nbsp; &rarrw;" background-color="var(--color-text-main)"
+            <Button button-text="Book a Visit &nbsp; &rarrw;" background-color="var(--color-text-main)"
               text-color="var(--bg-color-v1)" />
-            <ContactButton button-text="Contact Us &nbsp; &#9990;" background-color="var(--color-text-sub)"
+            <Button button-text="Contact Us &nbsp; &#9990;" background-color="var(--color-text-sub)"
               text-color="var(--color-text-main)" />
           </div>
         </div>
