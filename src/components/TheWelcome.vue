@@ -15,16 +15,24 @@ import Button from "./Button.vue";
           <span>ur best friend after all!</span>
         </h1>
         <p>
-          <span>We are not <em>kitten</em> you when we say your furry friends will
-            be receiving the best of the best.</span>
+          <span
+            >We are not <em>kitten</em> you when we say your furry friends will
+            be receiving the best of the best.</span
+          >
           <span>&nbsp;<em>Pup</em> down to locations now! </span>
         </p>
         <div class="headline-buttons-wrap">
           <div>
-            <Button button-text="Book a Visit &nbsp; &rarrw;" background-color="var(--color-text-main)"
-              text-color="var(--bg-color-v1)" />
-            <Button button-text="Contact Us &nbsp; &#9990;" background-color="var(--color-text-sub)"
-              text-color="var(--color-text-main)" />
+            <Button
+              button-text="Book a Visit &nbsp; &rarrw;"
+              background-color="var(--color-text-main)"
+              text-color="var(--bg-color-v1)"
+            />
+            <Button
+              button-text="Contact Us &nbsp; &#9990;"
+              background-color="var(--color-text-sub)"
+              text-color="var(--color-text-main)"
+            />
           </div>
         </div>
       </div>
@@ -50,53 +58,123 @@ import Button from "./Button.vue";
   grid-template-columns: repeat(12, 1fr);
   margin: auto;
   grid-template-rows: repeat(1, 1fr);
-}
 
-.main-headline-text {
-  grid-area: 1/1/2/6;
-}
+  .main-headline-text {
+    grid-area: 1/1/2/6;
+  }
 
-.main-headline-text em {
-  color: var(--color-text-sub);
-}
+  .main-headline-text em {
+    color: var(--color-text-sub);
+  }
 
-.main-headline-text>h1 {
-  padding-bottom: 1.5em;
-}
+  .main-headline-text > h1 {
+    padding-bottom: 1.5em;
+  }
 
-.main-headline-text>h1>span {
-  font-size: 50px;
-  box-sizing: border-box;
-  letter-spacing: 0.025em;
-  line-height: 1.2;
-}
+  .main-headline-text > h1 > span {
+    font-size: var(--font-size-xl);
+    box-sizing: border-box;
+    letter-spacing: 0.025em;
+    line-height: 1.2;
+  }
 
-.main-headline-text>p {
-  padding-bottom: 2em;
-}
+  .main-headline-text > p {
+    padding-bottom: 2em;
+  }
 
-.main-headline-text>p>span {
-  font-size: var(--font-size-base);
-}
+  .main-headline-text > p > span {
+    font-size: var(--font-size-base);
+  }
 
-.headline-buttons-wrap {
-  display: grid;
-}
+  .headline-buttons-wrap {
+    display: grid;
+  }
 
-.headline-buttons-wrap>div {
-  display: grid;
-  width: 75%;
-  gap: 0.5em;
-  justify-self: center;
-}
+  .headline-buttons-wrap > div {
+    display: grid;
+    width: 75%;
+    gap: 0.5em;
+    justify-self: center;
+  }
 
-.main-headline-image {
-  grid-area: 1/6/10/10;
-  background-image: url("../assets/hero-dog.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 0 -1em;
-  z-index: 1;
+  .main-headline-image {
+    grid-area: 1/6/10/10;
+    background-image: url("../assets/hero-dog.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -1em;
+    z-index: 1;
+  }
+
+  /* All screens from 768px to 1024px */
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .main-headline-text {
+      grid-area: 1/2/2/8;
+    }
+
+    .main-headline-image {
+      grid-area: 2/2/3/8;
+      background-size: 100%;
+    }
+
+    .main-headline-text > p > span {
+      font-size: var(--font-size-lg);
+    }
+
+    .headline-buttons-wrap > div {
+      width: 50%;
+    }
+
+    .accent-one {
+      grid-area: 2/5/2/8;
+      max-height: 74%;
+      margin-right: 4.5em;
+    }
+    .accent-two {
+      grid-area: 2/5/2/9;
+      max-height: 85%;
+      max-width: 65%;
+    }
+  }
+
+  /* Any screen from 320px to 767px */
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    .main-headline-text {
+      grid-area: 1/2/2/8;
+    }
+
+    .main-headline-text > h1 > span {
+      font-size: calc(var(--font-size-lg) + 0.5em);
+    }
+
+    .main-headline-image {
+      grid-area: 2/2/3/8;
+      background-size: 100%;
+    }
+
+    .main-headline-text > p > span {
+      font-size: var(--font-size-base);
+    }
+
+    .headline-buttons-wrap > div {
+      width: 60%;
+      margin-bottom: 3em;
+    }
+
+    .accent-one {
+      grid-area: 2/4/3/8;
+      max-height: 50%;
+      margin-right: 3em;
+    }
+    .accent-two {
+      grid-area: 2/4/3/8;
+      max-height: 60%;
+      max-width: 85%;
+    }
+  }
 }
 
 .accent-one {
