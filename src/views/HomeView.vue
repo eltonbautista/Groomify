@@ -7,9 +7,9 @@ import About from "@/components/About.vue";
   <main>
     <TheWelcome />
   </main>
-  <!-- <main>
+  <main>
     <About />
-  </main> -->
+  </main>
 </template>
 
 <style lang="scss" scoped>

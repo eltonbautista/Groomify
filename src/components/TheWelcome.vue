@@ -47,6 +47,7 @@ import Button from "./Button.vue";
 .container {
   background-color: var(--bg-color-v1);
   width: 100%;
+  /* min-height: 100vh; */
 }
 
 .hero {
@@ -116,7 +117,7 @@ import Button from "./Button.vue";
 
     .main-headline-image {
       grid-area: 2/2/3/8;
-      background-size: 100%;
+      background-size: 80%;
     }
 
     .main-headline-text > p > span {
