@@ -25,8 +25,10 @@ export default defineComponent({
   font-size: calc(var(--font-size-base) + 0.2em);
   border: none;
   font-weight: 900;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   padding: 0.35em 0em;
-  line-height: 2;
+  line-height: 3.5625rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 </style>
