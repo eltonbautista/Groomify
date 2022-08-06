@@ -18,7 +18,7 @@
   --common-font-family: 'Red Hat Display', sans-serif;
   --brand-font-family: 'Pattaya', sans-serif;
 
-  --max-width: 75em
+  --max-width: 75em;
 }
 
 *,
@@ -37,7 +37,7 @@ body {
   line-height: 1.6;
   font-family: RHD, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

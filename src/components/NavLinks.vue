@@ -38,4 +38,14 @@ export default defineComponent({
   text-shadow: 0 3px 5px gray;
   font-family: Pattaya, RHD, sans-serif;
 }
+
+@media (min-width: 1441px) {
+  .nav-item.groomify .nav-link {
+    font-size: calc(var(--font-size-lg) + 0.5em);
+    letter-spacing: 0.02em;
+    text-shadow: 0 3px 5px gray;
+    font-family: Pattaya, RHD, sans-serif;
+    padding-left: 5em;
+  }
+}
 </style>

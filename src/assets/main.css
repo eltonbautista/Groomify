@@ -84,9 +84,3 @@ a,
 }
 
 /* Styling for sections */
-section {
-  display: grid;
-  justify-self: center;
-  grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: repeat(9, 1fr); */
-}

@@ -44,8 +44,7 @@ import ContactButton from "./ContactButton.vue";
 <style lang="scss" scoped>
 .container {
   background-color: var(--bg-color-v1);
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
 }
 .hero {
   padding-top: 3em;
@@ -54,7 +53,6 @@ import ContactButton from "./ContactButton.vue";
   max-width: var(--max-width);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-area: 1/1/2/13;
   margin: auto;
   grid-template-rows: repeat(1, 1fr);
 }
@@ -131,14 +129,14 @@ import ContactButton from "./ContactButton.vue";
 
   .accent-one {
     min-height: 0;
-    max-height: 77%;
+    max-height: 50%;
     max-width: 100%;
   }
 
   .accent-two {
     grid-area: 1/8/3/11;
     max-width: 75%;
-    max-height: 88.5%;
+    max-height: 58.5%;
   }
 }
 </style>
