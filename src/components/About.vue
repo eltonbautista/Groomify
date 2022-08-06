@@ -27,8 +27,7 @@ import ContactButton from "./ContactButton.vue";
             </div>
             <div class="about-img">
                 <div class="backdrop"></div>
-                <div class="border">
-
+                <div class="image">
                     <img :src="image" />
                 </div>
             </div>
@@ -57,22 +56,47 @@ import ContactButton from "./ContactButton.vue";
     grid-template-columns: 1fr 458px;
 }
 
+@media screen and (max-width: 768px) {
+    .about {
+        margin: 0;
+        grid-template-areas: "header"
+            "image"
+            "text";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 .about-header {
     grid-area: header;
-    gap: 2em;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     padding-bottom: 75px;
 
+    @media screen and (max-width: 390px) {
+        margin: 0;
+    }
+
     h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 101px;
+        width: 582px;
+
+        @media screen and (max-width: 390px) {
+            width: 390px;
+
+        }
+
         font-size: 50px;
         font-weight: 900;
         color: var(--color-text-main);
-        height: 101px;
-        width: 582px;
+
         background-color: var(--color-text-accent);
         line-height: 6.3125rem;
-        vertical-align: middle;
     }
 
     p {
@@ -94,7 +118,9 @@ import ContactButton from "./ContactButton.vue";
 .about-text {
     grid-area: text;
     max-width: 750px;
-    padding-right: 68px;
+    padding: 0 3em;
+    margin: 0 auto;
+
 
     .top {
         letter-spacing: -0.1em;
@@ -120,13 +146,12 @@ import ContactButton from "./ContactButton.vue";
     }
 
     .button {
-        width: 100%;
         display: flex;
         justify-content: center;
-        padding-top: 5.9375rem;
+        padding-top: 5.9390rem;
 
         .contact-button {
-            width: 304px;
+            width: 290px;
         }
     }
 
@@ -138,22 +163,33 @@ import ContactButton from "./ContactButton.vue";
     justify-content: center;
     align-items: center;
     border: 1px solid var(--color-text-main);
-    width: 418px;
+    max-width: 418px;
     height: 532px;
 
-    .border {
+    @media screen and (max-width: 768px) {
+        margin: 150px auto;
+    }
+
+    .image {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: var(--color-text-accent);
         width: 332px;
         height: 466px;
+
     }
 
     .backdrop {
         position: absolute;
-        right: -45px;
         width: 272px;
+        right: -45px;
+
+        @media screen and (max-width: 390px) {
+            width: 200px;
+            right: -25px;
+        }
+
         height: 724px;
         background-color: var(--color-text-main);
     }
