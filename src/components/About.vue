@@ -123,7 +123,7 @@ import ContactButton from "./ContactButton.vue";
 
 
     .top {
-        letter-spacing: -0.1em;
+
 
         p {
 
