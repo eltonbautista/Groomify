@@ -25,12 +25,22 @@ export default defineComponent({
   grid-auto-flow: column;
   min-height: 9vh;
   padding: 1em 7.5em;
+
+  @media screen and (max-width: 767px) {
+    justify-items: center;
+  }
 }
 
 .navigation-wrapper {
   display: grid;
   grid-auto-flow: column;
   max-width: 75%;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    grid-auto-columns: none;
+    justify-items: center;
+  }
 }
 
 #nav > li {
