@@ -79,7 +79,7 @@ import Button from "./Button.vue";
   text-align: center;
   margin: 0 auto;
   padding-bottom: 4.6875rem;
-  max-width: 100%;
+  width: 50%;
 
   @media screen and (max-width: 390px) {
     margin: 0;
@@ -90,7 +90,7 @@ import Button from "./Button.vue";
     align-items: center;
     justify-content: center;
     height: 6.3125rem;
-    width: 36.375rem;
+    width: 100%;
 
     @media screen and (max-width: 390px) {
       width: 24.375rem;
@@ -102,18 +102,6 @@ import Button from "./Button.vue";
 
     background-color: var(--color-text-accent);
     line-height: 6.3125rem;
-  }
-
-  p {
-    .top-span {
-      font-size: var(--font-size-xl);
-      letter-spacing: 0.048em;
-    }
-
-    .bottom-span {
-      font-size: var(--font-size-xl);
-      letter-spacing: -0.067em;
-    }
   }
 }
 
@@ -172,14 +160,14 @@ import Button from "./Button.vue";
     justify-content: center;
     align-items: center;
     background-color: var(--color-text-accent);
-    width: 20.75rem;
+    max-width: 20.75rem;
     height: 29.125rem;
   }
 
   .backdrop {
     position: absolute;
-    width: 17rem;
-    right: -2.8125rem;
+    width: 16rem;
+    right: -2rem;
 
     @media screen and (max-width: 390px) {
       width: 12.5rem;
