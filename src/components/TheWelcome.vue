@@ -36,9 +36,11 @@ import Button from "./Button.vue";
           </div>
         </div>
       </div>
-      <div class="main-headline-image"></div>
-      <div class="accent-one"></div>
-      <div class="accent-two"></div>
+      <div class="hero-image">
+        <div class="main-headline-image"></div>
+        <div class="accent-one"></div>
+        <div class="accent-two"></div>
+      </div>
     </div>
   </section>
 </template>
@@ -47,7 +49,6 @@ import Button from "./Button.vue";
 .container {
   background-color: var(--bg-color-v1);
   width: 100%;
-  /* min-height: 100vh; */
 }
 
 .hero {
@@ -98,13 +99,36 @@ import Button from "./Button.vue";
     justify-self: center;
   }
 
-  .main-headline-image {
+  .hero-image {
     grid-area: 1/6/10/10;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .main-headline-image {
+    max-width: 100%;
+    min-height: 100%;
     background-image: url("../assets/hero-dog.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0 -1em;
     z-index: 1;
+    grid-area: 1/1/10/9;
+  }
+
+  .accent-one {
+    grid-area: 1/4/8/8;
+    background-color: var(--color-text-sub);
+    margin-top: 1em;
+    height: 92.5%;
+  }
+
+  .accent-two {
+    grid-area: 1/4/8/9;
+    border: 1px solid black;
+    border-left: none;
+    margin-top: 0.25em;
   }
 
   /* All screens from 768px to 1024px */
@@ -115,9 +139,13 @@ import Button from "./Button.vue";
       grid-area: 1/2/2/8;
     }
 
+    .hero-image {
+      grid-area: 2/1/3/9;
+    }
+
     .main-headline-image {
-      grid-area: 2/2/3/8;
-      background-size: 80%;
+      grid-area: 1/1/13/9;
+      background-size: 75%;
     }
 
     .main-headline-text > p > span {
@@ -126,33 +154,27 @@ import Button from "./Button.vue";
 
     .headline-buttons-wrap > div {
       width: 50%;
+      margin-bottom: 4em;
     }
 
     .accent-one {
-      grid-area: 2/5/2/8;
-      max-height: 74%;
-      margin-right: 4.5em;
+      grid-area: 1/3/12/7;
+      margin-top: 2.5em;
     }
     .accent-two {
-      grid-area: 2/5/2/9;
-      max-height: 85%;
-      max-width: 65%;
+      grid-area: 1/4/13/8;
+      height: 95%;
     }
   }
 
   /* Any screen from 320px to 767px */
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    .main-headline-text {
-      grid-area: 1/2/2/8;
-    }
-
     .main-headline-text > h1 > span {
       font-size: calc(var(--font-size-lg) + 0.5em);
     }
 
     .main-headline-image {
-      grid-area: 2/2/3/8;
       background-size: 100%;
     }
 
@@ -162,55 +184,15 @@ import Button from "./Button.vue";
 
     .headline-buttons-wrap > div {
       width: 60%;
-      margin-bottom: 3em;
     }
-
     .accent-one {
-      grid-area: 2/4/3/8;
-      max-height: 50%;
-      margin-right: 3em;
+      grid-area: 1/4/9/8;
+      margin-left: 1em;
     }
     .accent-two {
-      grid-area: 2/4/3/8;
-      max-height: 60%;
+      grid-area: 1/5/10/9;
       max-width: 85%;
     }
-  }
-}
-
-.accent-one {
-  grid-area: 1/8/3/10;
-  z-index: 0;
-  background-color: var(--color-text-sub);
-  max-height: 60%;
-  max-width: 80%;
-  margin-top: 3em;
-}
-
-.accent-two {
-  grid-area: 1/8/3/10;
-  z-index: 0;
-  border: 1px solid black;
-  border-left: none;
-  margin-top: 0.25em;
-  max-height: 70%;
-}
-
-@media (max-width: 1440px) {
-  .main-headline-image {
-    background-size: 110%;
-  }
-
-  .accent-one {
-    min-height: 0;
-    max-height: 50%;
-    max-width: 100%;
-  }
-
-  .accent-two {
-    grid-area: 1/8/3/11;
-    max-width: 75%;
-    max-height: 58.5%;
   }
 }
 </style>
