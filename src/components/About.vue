@@ -1,201 +1,198 @@
 <script setup lang="ts">
-import image from "../assets/DoggoAbout.png"
+import image from "../assets/about-dog.png";
 import Button from "./Button.vue";
 </script>
 
 <template>
-    <section class="container">
-        <div class="about">
-            <div class="about-header">
-                <h1>About Us</h1>
-            </div>
-            <div class="about-text">
-                <div class="top">
-                    <p>Here at <em>Groomify</em> we take <em>pride</em> in the work that we do.</p>
-                </div>
-                <div class="bottom">
-                    <p>We’re pet owners, so we know how important your furry friends are to you - trust us
-                        when we say;
-                        they’re important to us too.</p>
-                </div>
-
-                <div class="button-container">
-                    <Button button-text="Contact Us &nbsp; &#9990;" background-color="var(--color-text-accent)"
-                        text-color="var(--color-text-main)" />
-                </div>
-
-            </div>
-            <div class="about-img">
-                <div class="backdrop"></div>
-                <div class="image">
-                    <img :src="image" />
-                </div>
-            </div>
+  <section class="container">
+    <div class="about">
+      <div class="about-header">
+        <h1>About Us</h1>
+      </div>
+      <div class="about-text">
+        <div class="top">
+          <p>
+            Here at <em>Groomify</em> we take <em>pride</em> in the work that we
+            do.
+          </p>
+        </div>
+        <div class="bottom">
+          <p>
+            We’re pet owners, so we know how important your furry friends are to
+            you - trust us when we say; they’re important to us too.
+          </p>
         </div>
 
-    </section>
+        <div class="button-container">
+          <Button
+            button-text="Contact Us &nbsp; &#9990;"
+            background-color="var(--color-text-accent)"
+            text-color="var(--color-text-main)"
+          />
+        </div>
+      </div>
+      <div class="about-img">
+        <div class="backdrop"></div>
+        <div class="image">
+          <img :src="image" />
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
 .container {
-    height: 100%;
-    width: 100%;
-    background-color: var(--bg-color-about);
-    font-family: var(--common-font-family);
-    padding-top: 2em;
-    padding-bottom: 8em;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color-about);
+  font-family: var(--common-font-family);
+  padding-top: 2em;
+  padding-bottom: 8em;
 }
 
 .about {
-    max-width: var(--max-width);
-    margin: auto;
-    display: grid;
-    grid-template-areas: "header header"
-        "text image";
-    grid-template-rows: 2fr;
-    grid-template-columns: 1fr 458px;
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "text image";
+  grid-template-rows: 2fr;
+  grid-template-columns: 1fr 28.625rem;
 }
 
 @media screen and (max-width: 768px) {
-    .about {
-        margin: 0;
-        grid-template-areas: "header"
-            "image"
-            "text";
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-    }
+  .about {
+    margin: 0;
+    grid-template-areas:
+      "header"
+      "image"
+      "text";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
-
-
 .about-header {
-    grid-area: header;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 75px;
+  grid-area: header;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 4.6875rem;
+  max-width: 100%;
+
+  @media screen and (max-width: 390px) {
+    margin: 0;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.3125rem;
+    width: 36.375rem;
 
     @media screen and (max-width: 390px) {
-        margin: 0;
+      width: 24.375rem;
     }
 
-    h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 101px;
-        width: 582px;
+    font-size: 3.125rem;
+    font-weight: 900;
+    color: var(--color-text-main);
 
-        @media screen and (max-width: 390px) {
-            width: 390px;
+    background-color: var(--color-text-accent);
+    line-height: 6.3125rem;
+  }
 
-        }
-
-        font-size: 50px;
-        font-weight: 900;
-        color: var(--color-text-main);
-
-        background-color: var(--color-text-accent);
-        line-height: 6.3125rem;
+  p {
+    .top-span {
+      font-size: var(--font-size-xl);
+      letter-spacing: 0.048em;
     }
 
-    p {
-        .top-span {
-            font-size: var(--font-size-xl);
-            letter-spacing: 0.048em;
-
-        }
-
-        .bottom-span {
-            font-size: var(--font-size-xl);
-            letter-spacing: -0.067em;
-        }
+    .bottom-span {
+      font-size: var(--font-size-xl);
+      letter-spacing: -0.067em;
     }
-
-
+  }
 }
 
 .about-text {
-    grid-area: text;
-    max-width: 750px;
-    padding: 0 3em;
-    margin: 0 auto;
+  grid-area: text;
+  max-width: 46.875rem;
+  padding: 0 3em;
+  margin: 0 auto;
 
-
-    .top {
-
-        p {
-
-            font-size: 50px;
-            font-weight: 500;
-            padding-bottom: 38px;
-        }
-
-        em {
-            font-weight: 800;
-            color: var(--color-text-accent);
-        }
+  .top {
+    p {
+      font-size: 3.125rem;
+      font-weight: 500;
+      padding-bottom: 2.375rem;
     }
 
-    .bottom {
-        p {
-            font-size: 30px;
-            font-weight: 500;
-        }
+    em {
+      font-weight: 800;
+      color: var(--color-text-accent);
     }
+  }
 
-    .button-container {
-        display: flex;
-        justify-content: center;
-        padding-top: 5.9390rem;
-
-        .button {
-            width: 290px;
-        }
+  .bottom {
+    p {
+      font-size: 1.875rem;
+      font-weight: 500;
     }
+  }
 
+  .button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5.939rem;
+
+    .button {
+      width: 18.125rem;
+    }
+  }
 }
 
 .about-img {
-    grid-area: image;
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.0625rem solid var(--color-text-main);
+  max-width: 26.125rem;
+  height: 33.25rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 9.375rem auto;
+  }
+
+  .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--color-text-main);
-    max-width: 418px;
-    height: 532px;
+    background-color: var(--color-text-accent);
+    width: 20.75rem;
+    height: 29.125rem;
+  }
 
-    @media screen and (max-width: 768px) {
-        margin: 150px auto;
+  .backdrop {
+    position: absolute;
+    width: 17rem;
+    right: -2.8125rem;
+
+    @media screen and (max-width: 390px) {
+      width: 12.5rem;
+      right: -1.5625rem;
     }
 
-    .image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--color-text-accent);
-        width: 332px;
-        height: 466px;
+    height: 45.25rem;
+    background-color: var(--color-text-main);
+  }
 
-    }
-
-    .backdrop {
-        position: absolute;
-        width: 272px;
-        right: -45px;
-
-        @media screen and (max-width: 390px) {
-            width: 200px;
-            right: -25px;
-        }
-
-        height: 724px;
-        background-color: var(--color-text-main);
-    }
-
-    img {
-        width: 297px;
-        height: 388.42px;
-    }
+  img {
+    width: 18.5625rem;
+    height: 24.2763rem;
+  }
 }
 </style>
