@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-
 export default defineComponent({
   props: {
     buttonText: String,
@@ -11,7 +10,7 @@ export default defineComponent({
 </script>
 <template>
   <section class="container">
-    <div class="grid"></div>
+    <div class="grid">Hi</div>
   </section>
 </template>
 <style lang="scss" scoped>
