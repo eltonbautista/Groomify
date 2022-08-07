@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import Hero from "@/components/Hero.vue";
-import About from "@/components/About.vue";
-import Contact from "@/components/Contact.vue";
+import MyHero from "../components/MyHero.vue";
+import MyAbout from "../components/MyAbout.vue";
+import MyContact from "../components/MyContact.vue";
+import MyPricing from "../components/MyPricing.vue";
 </script>
 <!-- Please add About and Pricing components just under <TheWelcome />. Make sure to follow TheWelcome's syntax! -->
 <template>
   <main>
-    <TheWelcome />
-    <Hero />
-    <About />
-    <Contact />
-    <Pricing />
+    <MyHero />
+    <MyAbout />
+    <MyPricing />
+    <MyContact />
   </main>
 </template>
 

@@ -1,5 +1,11 @@
-<script setup lang="ts">
-import Button from "./Button.vue";
+<script lang="ts">
+import { defineComponent } from "vue";
+import MainButton from "./MainButton.vue";
+export default defineComponent({
+  components: {
+    MainButton,
+  },
+});
 </script>
 
 <template>
@@ -23,12 +29,12 @@ import Button from "./Button.vue";
         </p>
         <div class="headline-buttons-wrap">
           <div>
-            <Button
+            <MainButton
               button-text="Book a Visit &nbsp; &rarrw;"
               background-color="var(--color-text-main)"
               text-color="var(--bg-color-v1)"
             />
-            <Button
+            <MainButton
               button-text="Contact Us &nbsp; &#9990;"
               background-color="var(--color-text-sub)"
               text-color="var(--color-text-main)"

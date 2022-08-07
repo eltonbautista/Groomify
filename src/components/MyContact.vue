@@ -1,13 +1,24 @@
-<script setup lang="ts">
-import image from "../assets/contact-dog.png";
-import Button from "./Button.vue";
+<script lang="ts">
+import { defineComponent } from "vue";
+import dog from "../assets/contact-dog.png";
+import MainButton from "./MainButton.vue";
+export default defineComponent({
+  data() {
+    return {
+      dog,
+    };
+  },
+  components: {
+    MainButton,
+  },
+});
 </script>
 
 <template>
   <section class="container">
     <div class="contact">
       <div class="contact-image">
-        <img :src="image" />
+        <img :src="dog" />
       </div>
       <div class="contact-text">
         <div class="header">
@@ -35,7 +46,7 @@ import Button from "./Button.vue";
             />
           </div>
           <div class="button-container">
-            <Button
+            <MainButton
               button-text="Contact Us &nbsp; &#9990;"
               background-color="var(--homepage-gradient-four)"
               text-color="var(--color-text-main)"
