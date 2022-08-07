@@ -135,6 +135,7 @@ import Button from "./Button.vue";
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
     .main-headline-text {
       grid-area: 1/2/2/8;
     }
@@ -161,6 +162,7 @@ import Button from "./Button.vue";
       grid-area: 1/3/12/7;
       margin-top: 2.5em;
     }
+
     .accent-two {
       grid-area: 1/4/13/8;
       height: 95%;
@@ -189,6 +191,7 @@ import Button from "./Button.vue";
       grid-area: 1/4/9/8;
       margin-left: 1em;
     }
+
     .accent-two {
       grid-area: 1/5/10/9;
       max-width: 85%;

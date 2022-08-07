@@ -3,14 +3,14 @@
   --color-text-main: #000000;
   --color-text-sub: #FFFFFF;
   --color-text-accent: #FFC3BB;
-
+  --color-border: #6F6F6F;
   --homepage-gradient-one: #7735E4;
   --homepage-gradient-two: #DA70A9;
   --homepage-gradient-three: #EA8EA4;
   --homepage-gradient-four: #FFD494;
 
   --bg-color-v1: #FFC3BB;
-  --bg-color-about: #F1F1F1;
+  --bg-color-about: #FFFFFF;
 
   --font-size-sm: clamp(0.87rem, 0.14vw + 0.67rem, 1rem);
   --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
