@@ -100,14 +100,13 @@ export default defineComponent({
     display: flex;
     padding-left: 1rem;
 
-    background-color: var(--color-text-accent);
     h1 {
-      font-weight: 900;
-      font-size: 3.125rem;
+      font-weight: 500;
+      font-size: var(--font-size-xxl);
     }
     em {
       font-weight: 900;
-      color: var(--color-text-sub);
+      color: var(--color-text-accent);
     }
   }
   .sub-header {

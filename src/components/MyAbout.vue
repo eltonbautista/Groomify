@@ -18,7 +18,7 @@ export default defineComponent({
   <section class="container">
     <div class="about">
       <div class="about-header">
-        <h1>About Us</h1>
+        <h1>Who&nbsp;<em>we</em>&nbsp;are</h1>
       </div>
       <div class="about-text">
         <div class="top">
@@ -106,12 +106,14 @@ export default defineComponent({
     @media screen and (max-width: 390px) {
       width: 24.375rem;
     }
+    > em {
+      font-weight: 900;
+      color: var(--homepage-gradient-four);
+    }
 
-    font-size: 3.125rem;
-    font-weight: 900;
+    font-size: var(--font-size-xxl);
+    font-weight: 500;
     color: var(--color-text-main);
-
-    background-color: var(--color-text-accent);
     line-height: 6.3125rem;
   }
 }

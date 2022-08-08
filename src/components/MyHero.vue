@@ -25,7 +25,7 @@ export default defineComponent({
             >We are not <em>kitten</em> you when we say your furry friends will
             be receiving the best of the best.</span
           >
-          <span>&nbsp;<em>Pup</em> down to locations now! </span>
+          <span>&nbsp;<em>Pup</em> down to our locations now! </span>
         </p>
         <div class="headline-buttons-wrap">
           <div>
@@ -73,6 +73,7 @@ export default defineComponent({
 
   .main-headline-text em {
     color: var(--color-text-sub);
+    font-weight: 500;
   }
 
   .main-headline-text > h1 {
@@ -84,6 +85,7 @@ export default defineComponent({
     box-sizing: border-box;
     letter-spacing: 0.025em;
     line-height: 1.2;
+    font-weight: 500;
   }
 
   .main-headline-text > p {
@@ -125,7 +127,7 @@ export default defineComponent({
 
   .accent-one {
     grid-area: 1/4/8/8;
-    background-color: var(--color-text-sub);
+    background-color: var(--bg-color-about);
     margin-top: 1em;
     height: 92.5%;
   }
