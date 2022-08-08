@@ -58,7 +58,6 @@ export default defineComponent({
 </template>
 <style lang="scss" scoped>
 .price-display-wrap {
-  grid-area: var(--area);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -73,9 +72,51 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     justify-self: center;
-    line-height: 3;
+    align-items: center;
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      width: 60%;
+      height: 50%;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-area: 6/1/7/5;
+      display: flex;
+      align-items: center;
+    }
   }
 }
+
+.small {
+  grid-area: 3/2/7/6;
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    grid-area: 2/2/2/8;
+  }
+  @media screen and (max-width: 480px) {
+    grid-area: 2/2/3/8;
+  }
+}
+
+.medium {
+  grid-area: 3/6/7/10;
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    grid-area: 3/2/3/8;
+  }
+  @media screen and (max-width: 480px) {
+    grid-area: 3/2/4/8;
+  }
+}
+
+.large {
+  grid-area: 3/10/7/14;
+
+  @media screen and (max-width: 768px) {
+    grid-area: 4/2/5/8;
+  }
+}
+
 .display-image {
   grid-area: 1/1/4/3;
   > img {
@@ -96,6 +137,13 @@ export default defineComponent({
     max-width: fit-content;
     font-size: calc(var(--font-size-lg) + 1em);
     font-weight: 500;
+
+    @media screen and (max-width: 1024px) {
+      font-size: calc(var(--font-size-lg) + 0.5em);
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      font-size: var(--font-size-xxl);
+    }
   }
 }
 
@@ -105,6 +153,7 @@ export default defineComponent({
   > p {
     max-width: fit-content;
     justify-self: center;
+    font-size: var(--font-size-base);
   }
 }
 

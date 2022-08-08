@@ -26,7 +26,6 @@ export default defineComponent({
       <header class="banner">
         <h1>We&nbsp;<em> match </em>&nbsp;our prices!</h1>
       </header>
-      <div class="border"></div>
       <PricingDisplay
         :display-information="{
           dogSize: 'Small',
@@ -38,7 +37,7 @@ export default defineComponent({
           price: '35',
         }"
         :imgSrc="shihtzu"
-        :area="'3/2/7/6'"
+        class="small"
       />
       <PricingDisplay
         :display-information="{
@@ -51,7 +50,7 @@ export default defineComponent({
           price: '60',
         }"
         :imgSrc="golden"
-        :area="'3/6/7/10'"
+        class="medium"
       />
       <PricingDisplay
         :display-information="{
@@ -64,7 +63,7 @@ export default defineComponent({
           price: '80',
         }"
         :imgSrc="husky"
-        :area="'3/10/7/14'"
+        class="large"
       />
     </div>
   </section>
@@ -76,6 +75,10 @@ export default defineComponent({
   justify-items: center;
 }
 
+.scroll {
+  display: none;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
@@ -83,23 +86,23 @@ export default defineComponent({
   max-width: var(--max-width);
   gap: 1em;
   margin-bottom: 3em;
-}
 
-.border {
-  grid-area: 2/1/8/15;
-  height: 80%;
-  justify-self: center;
-  align-self: center;
-  border: 1px solid var(--color-text-sub);
-  border-radius: 0.5em;
-  padding: 5em;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 1em;
+  }
 }
 
 .banner {
   display: grid;
   grid-area: 1/1/2/14;
   margin-top: 2em;
-  height: 6.3125rem;
+
+  @media screen and (max-width: 768px) {
+    grid-area: 1/2/2/8;
+    margin-bottom: 5em;
+  }
 
   > h1 {
     font-size: var(--font-size-xxl);
@@ -107,6 +110,15 @@ export default defineComponent({
     align-items: center;
     font-weight: 500;
     margin-top: 0.5em;
+
+    @media screen and (min-width: 769px) and (max-width: 1199px) {
+      padding-left: 1em;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: grid;
+      justify-items: center;
+    }
 
     > em {
       font-weight: 900;
