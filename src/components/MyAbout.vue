@@ -94,6 +94,7 @@ export default defineComponent({
 
   @media screen and (max-width: 390px) {
     margin: 0;
+    width: 100%;
   }
 
   h1 {
@@ -103,9 +104,6 @@ export default defineComponent({
     height: 6.3125rem;
     width: 100%;
 
-    @media screen and (max-width: 390px) {
-      width: 24.375rem;
-    }
     > em {
       font-weight: 900;
       color: var(--homepage-gradient-four);
@@ -150,7 +148,7 @@ export default defineComponent({
     padding-top: 5.939rem;
 
     .button {
-      width: 18.125rem;
+      width: 100%;
     }
   }
 }
