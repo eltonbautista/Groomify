@@ -60,12 +60,12 @@ export default defineComponent({
 .hero {
   padding-top: 3em;
   background-color: var(--bg-color-v1);
-  min-height: 100vh;
   max-width: var(--max-width);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: auto;
   grid-template-rows: repeat(1, 1fr);
+  padding-bottom: 3em;
 
   .main-headline-text {
     grid-area: 1/1/2/6;
@@ -140,6 +140,10 @@ export default defineComponent({
   }
 
   /* All screens from 768px to 1024px */
+  @media screen and (min-width: 1025px) and (max-width: 1250px) {
+    padding-left: 3em;
+  }
+
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr);
