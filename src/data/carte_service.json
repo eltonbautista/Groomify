@@ -1,18 +1,18 @@
 {
-  "carte_service": [
+  "carteServices": [
     {
       "service": "Nail Trim",
-      "price": " $5.00",
+      "price": " $5",
       "isIncluded": false
     },
     {
-      "service": "Ear Plucking & Trimming",
-      "price": " $10.00",
+      "service": "Ear Pluck & Trim",
+      "price": " $10",
       "isIncluded": false
     },
     {
       "service": "Anal Glands Expelled",
-      "price": " $10.00",
+      "price": " $10",
       "isIncluded": false
     },
     {
@@ -26,9 +26,9 @@
       "isIncluded": false
     }
   ],
-  "small_service": [
+  "smallServices": [
     {
-      "BREED": "Beagle",
+      "Breed": "Beagle",
       "Bath + Tidy": 35,
       "BT + HS": 52,
       "Kennel Clip": 52,
@@ -36,7 +36,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Bichon Frise",
+      "Breed": "Bichon Frise",
       "Bath + Tidy": 35,
       "BT + HS": 52,
       "Kennel Clip": 40,
@@ -44,7 +44,7 @@
       "Breed Clip": 65
     },
     {
-      "BREED": "Border Terrier",
+      "Breed": "Border Terrier",
       "Bath + Tidy": 35,
       "BT + HS": 40,
       "Kennel Clip": 45,
@@ -52,7 +52,7 @@
       "Breed Clip": 65
     },
     {
-      "BREED": "Brussels Griffon",
+      "Breed": "Brussels Griffon",
       "Bath + Tidy": 35,
       "BT + HS": 40,
       "Kennel Clip": 45,
@@ -60,7 +60,7 @@
       "Breed Clip": 60
     },
     {
-      "BREED": "Bulldog",
+      "Breed": "Bulldog",
       "Bath + Tidy": 35,
       "BT + HS": 52,
       "Kennel Clip": 52,
@@ -68,7 +68,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Cairn Terrier",
+      "Breed": "Cairn Terrier",
       "Bath + Tidy": 35,
       "BT + HS": 40,
       "Kennel Clip": 45,
@@ -76,7 +76,7 @@
       "Breed Clip": 66
     },
     {
-      "BREED": "Cavalier King Charles Spaniel",
+      "Breed": "Cavalier King Charles Spaniel",
       "Bath + Tidy": 35,
       "BT + HS": 52,
       "Kennel Clip": 45,
@@ -84,7 +84,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Chihuahua (Long Hair)",
+      "Breed": "Chihuahua (Long Hair)",
       "Bath + Tidy": 35,
       "BT + HS": 52,
       "Kennel Clip": 45,
@@ -92,7 +92,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Chinese Crested (Powderpuff)",
+      "Breed": "Chinese Crested (Powderpuff)",
       "Bath + Tidy": 35,
       "BT + HS": 52,
       "Kennel Clip": 45,
@@ -100,7 +100,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Corgi",
+      "Breed": "Corgi",
       "Bath + Tidy": 35,
       "BT + HS": 52,
       "Kennel Clip": 45,
@@ -108,9 +108,9 @@
       "Breed Clip": 52
     }
   ],
-  "medium_service": [
+  "mediumServices": [
     {
-      "BREED": "Golden Retriever",
+      "Breed": "Golden Retriever",
       "Bath + Tidy": 45,
       "BT + HS": 50,
       "Kennel Clip": 52,
@@ -118,7 +118,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Affen Pinscher ",
+      "Breed": "Affen Pinscher ",
       "Bath + Tidy": 45,
       "BT + HS": 52,
       "Kennel Clip": 50,
@@ -126,7 +126,7 @@
       "Breed Clip": 75
     },
     {
-      "BREED": "Basenji",
+      "Breed": "Basenji",
       "Bath + Tidy": 45,
       "BT + HS": 50,
       "Kennel Clip": 55,
@@ -134,7 +134,7 @@
       "Breed Clip": 65
     },
     {
-      "BREED": "Basset",
+      "Breed": "Basset",
       "Bath + Tidy": 45,
       "BT + HS": 50,
       "Kennel Clip": 55,
@@ -142,7 +142,7 @@
       "Breed Clip": 60
     },
     {
-      "BREED": "Bedlington",
+      "Breed": "Bedlington",
       "Bath + Tidy": 45,
       "BT + HS": 52,
       "Kennel Clip": 52,
@@ -150,7 +150,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Border Collie",
+      "Breed": "Border Collie",
       "Bath + Tidy": 45,
       "BT + HS": 50,
       "Kennel Clip": 55,
@@ -158,7 +158,7 @@
       "Breed Clip": 66
     },
     {
-      "BREED": "Cocker Spaniel",
+      "Breed": "Cocker Spaniel",
       "Bath + Tidy": 45,
       "BT + HS": 52,
       "Kennel Clip": 55,
@@ -166,7 +166,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "English Cocker Spaniel",
+      "Breed": "English Cocker Spaniel",
       "Bath + Tidy": 45,
       "BT + HS": 52,
       "Kennel Clip": 55,
@@ -174,7 +174,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Nova Scotia Duck Toller",
+      "Breed": "Nova Scotia Duck Toller",
       "Bath + Tidy": 45,
       "BT + HS": 52,
       "Kennel Clip": 85,
@@ -182,7 +182,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Poodle",
+      "Breed": "Poodle",
       "Bath + Tidy": 45,
       "BT + HS": 52,
       "Kennel Clip": 45,
@@ -190,9 +190,9 @@
       "Breed Clip": 52
     }
   ],
-  "large_service": [
+  "largeServices": [
     {
-      "BREED": "Keeshond",
+      "Breed": "Keeshond",
       "Bath + Tidy": 80,
       "BT + HS": 52,
       "Kennel Clip": 90,
@@ -200,7 +200,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Poodle (Standard)",
+      "Breed": "Poodle (Standard)",
       "Bath + Tidy": 50,
       "BT + HS": 52,
       "Kennel Clip": 65,
@@ -208,7 +208,7 @@
       "Breed Clip": 90
     },
     {
-      "BREED": "Schnauzer (Standard)",
+      "Breed": "Schnauzer (Standard)",
       "Bath + Tidy": 55,
       "BT + HS": 50,
       "Kennel Clip": 55,
@@ -216,7 +216,7 @@
       "Breed Clip": 75
     },
     {
-      "BREED": "Scottish Terrier",
+      "Breed": "Scottish Terrier",
       "Bath + Tidy": 55,
       "BT + HS": 50,
       "Kennel Clip": 55,
@@ -224,7 +224,7 @@
       "Breed Clip": 60
     },
     {
-      "BREED": "Sheltie (Large)",
+      "Breed": "Sheltie (Large)",
       "Bath + Tidy": 55,
       "BT + HS": 52,
       "Kennel Clip": 55,
@@ -232,7 +232,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Shiba Inu",
+      "Breed": "Shiba Inu",
       "Bath + Tidy": 50,
       "BT + HS": 52,
       "Kennel Clip": 52,
@@ -240,7 +240,7 @@
       "Breed Clip": 52
     },
     {
-      "BREED": "Shih Tzu",
+      "Breed": "Shih Tzu",
       "Bath + Tidy": 55,
       "BT + HS": 52,
       "Kennel Clip": 55,
@@ -248,7 +248,7 @@
       "Breed Clip": 70
     },
     {
-      "BREED": "Welsh Springer Spaniel",
+      "Breed": "Welsh Springer Spaniel",
       "Bath + Tidy": 55,
       "BT + HS": 60,
       "Kennel Clip": 65,
@@ -256,7 +256,7 @@
       "Breed Clip": 80
     },
     {
-      "BREED": "West Highland White",
+      "Breed": "West Highland White",
       "Bath + Tidy": 55,
       "BT + HS": 60,
       "Kennel Clip": 75,
@@ -264,12 +264,20 @@
       "Breed Clip": 80
     },
     {
-      "BREED": "Wheaten Terrier",
+      "Breed": "Wheaten Terrier",
       "Bath + Tidy": 55,
       "BT + HS": 52,
       "Kennel Clip": 60,
       "Teddy Bear": 65,
       "Breed Clip": 75
     }
+  ],
+  "includedServices": [
+    "Bath",
+    "Nail trim",
+    "Ear cleaning",
+    "Ear plucking",
+    "Cologne or perfume",
+    "Ribbons or bandana"
   ]
 }

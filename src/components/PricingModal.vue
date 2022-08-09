@@ -2,32 +2,24 @@
 import { defineComponent } from "vue";
 import LaCarte from "./LaCarte.vue";
 import pricingData from "../data/carte_service.json";
+import ServiceChild from "./ServiceChild.vue";
+import StylingService from "./StylingService.vue";
 
 export default defineComponent({
   props: {
-    filler: String,
+    breedServicesConditional: String,
   },
   data() {
     return {
-      stylesInclude: [
-        "Bath",
-        "Blow dry",
-        "Nail trim",
-        "Ear cleaning",
-        "Ear plucking",
-        "Cologne or perfume",
-        "Ribbons or bandana",
-      ],
-      carteExample: {
-        service: "Nail Trim",
-        price: "$5.00",
-        isIncluded: false,
-      },
+      carteServices: pricingData.carteServices,
+      smallServices: pricingData.smallServices,
+      mediumServices: pricingData.mediumServices,
+      largeServices: pricingData.largeServices,
+      includedServices: pricingData.includedServices,
     };
   },
-  components: { LaCarte },
+  components: { LaCarte, ServiceChild, StylingService },
 });
-console.log(pricingData);
 </script>
 <template>
   <div class="modal-background"></div>
@@ -39,16 +31,34 @@ console.log(pricingData);
           <h1 class="modal-header">My <em>Salon</em></h1>
         </div>
         <div class="carte-wrapper">
-          <h2 class="carte-header">A La Carte</h2>
-          <LaCarte :la-carte="carteExample" />
-          <!--TODO MAP LaCarte components here  -->
+          <h2 class="carte-header"><em>A La Carte</em></h2>
+          <LaCarte
+            v-for="(service, index) in carteServices"
+            :key="index"
+            :la-carte="service"
+          />
         </div>
         <div class="carousel"></div>
         <div class="included-wrapper">
-          <!--TODO MAP included list component here -->
+          <h2><em>Included</em></h2>
+          <ul class="included-services">
+            <div>
+              <li
+                class="inc-service"
+                v-for="(service, index) in includedServices"
+                :key="index"
+              >
+                {{ service }}
+              </li>
+            </div>
+          </ul>
         </div>
         <div class="styling-services-wrapper">
-          <!--TODO MAP StylingService components here -->
+          <StylingService
+            v-for="(obj, index) in smallServices.slice(0, 6)"
+            :styling-service="Object.keys(obj)[index]"
+            :key="index"
+          />
         </div>
       </div>
     </form>
@@ -89,7 +99,8 @@ console.log(pricingData);
   }
 }
 .carte-wrapper {
-  grid-area: 3/1/7/7;
+  grid-area: 3/1/6/7;
+  display: grid;
 }
 
 .carousel {
@@ -97,8 +108,29 @@ console.log(pricingData);
 }
 .included-wrapper {
   grid-area: 7/1/9/7;
+  display: grid;
+
+  .included-services {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > div {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      height: 100%;
+    }
+  }
+
+  .inc-service {
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size-sm);
+  }
 }
 .styling-services-wrapper {
   grid-area: 9/1/13/15;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
 </style>

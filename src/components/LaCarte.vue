@@ -31,3 +31,10 @@ export default defineComponent({
     </span>
   </div>
 </template>
+<style lang="scss" scoped>
+.la-carte-item {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  align-items: center;
+}
+</style>

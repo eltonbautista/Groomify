@@ -1,12 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-interface ILaCarteItem {
-  service: string;
-  price: number | string | void | null;
-  isIncluded: boolean;
-}
-
 // TODO: isIncluded to be toggled by checkbox.
 // NOTE: Object will look like this. Each key will match a StylingService
 // Each key's value will be data for ServiceChild component
@@ -22,11 +16,10 @@ interface ILaCarteItem {
 // },
 export default defineComponent({
   props: {
-    laCarte: {
+    stylingService: {
       required: true,
-      type: Object as () => ILaCarteItem,
+      type: String,
     },
-    stylingService: String,
   },
 });
 </script>
@@ -38,3 +31,8 @@ export default defineComponent({
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.service-wrapper {
+  min-height: 100%;
+}
+</style>
