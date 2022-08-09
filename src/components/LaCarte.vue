@@ -15,8 +15,6 @@ export default defineComponent({
       required: true,
       type: Object as () => ILaCarteItem,
     },
-    imgSrc: String,
-    area: String,
   },
 });
 </script>

@@ -75,10 +75,6 @@ export default defineComponent({
   justify-items: center;
 }
 
-.scroll {
-  display: none;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
