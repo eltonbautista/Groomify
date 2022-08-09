@@ -3,14 +3,16 @@ import MyHero from "../components/MyHero.vue";
 import MyAbout from "../components/MyAbout.vue";
 import MyContact from "../components/MyContact.vue";
 import MyPricing from "../components/MyPricing.vue";
+import PricingModal from "../components/PricingModal.vue";
 </script>
 <!-- Please add About and Pricing components just under <TheWelcome />. Make sure to follow TheWelcome's syntax! -->
 <template>
   <main>
-    <MyHero />
+    <!-- <MyHero />
     <MyAbout />
     <MyPricing />
-    <MyContact />
+    <MyContact /> -->
+    <PricingModal />
   </main>
 </template>
 
