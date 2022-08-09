@@ -8,7 +8,18 @@ interface ILaCarteItem {
 }
 
 // TODO: isIncluded to be toggled by checkbox.
-
+// NOTE: Object will look like this. Each key will match a StylingService
+// Each key's value will be data for ServiceChild component
+// E.g. stylingService: Breed will have a list of breeds being mapped with ServiceChild
+// Refer to prototype of example
+// {
+//   "BREED": "Beagle",
+//   "Bath + Tidy": 35,
+//   "BT + HS": 52,
+//   "Kennel Clip": 52,
+//   "Teddy Bear": 52,
+//   "Breed Clip": 52
+// },
 export default defineComponent({
   props: {
     laCarte: {
@@ -16,7 +27,6 @@ export default defineComponent({
       type: Object as () => ILaCarteItem,
     },
     stylingService: String,
-    area: String,
   },
 });
 </script>

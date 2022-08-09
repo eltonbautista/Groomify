@@ -1,0 +1,275 @@
+{
+  "carte_service": [
+    {
+      "service": "Nail Trim",
+      "price": " $5.00",
+      "isIncluded": false
+    },
+    {
+      "service": "Ear Plucking & Trimming",
+      "price": " $10.00",
+      "isIncluded": false
+    },
+    {
+      "service": "Anal Glands Expelled",
+      "price": " $10.00",
+      "isIncluded": false
+    },
+    {
+      "service": "Potty Patch",
+      "price": " $10",
+      "isIncluded": false
+    },
+    {
+      "service": "Quick Trim",
+      "price": " $20",
+      "isIncluded": false
+    }
+  ],
+  "small_service": [
+    {
+      "BREED": "Beagle",
+      "Bath + Tidy": 35,
+      "BT + HS": 52,
+      "Kennel Clip": 52,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Bichon Frise",
+      "Bath + Tidy": 35,
+      "BT + HS": 52,
+      "Kennel Clip": 40,
+      "Teddy Bear": 45,
+      "Breed Clip": 65
+    },
+    {
+      "BREED": "Border Terrier",
+      "Bath + Tidy": 35,
+      "BT + HS": 40,
+      "Kennel Clip": 45,
+      "Teddy Bear": 55,
+      "Breed Clip": 65
+    },
+    {
+      "BREED": "Brussels Griffon",
+      "Bath + Tidy": 35,
+      "BT + HS": 40,
+      "Kennel Clip": 45,
+      "Teddy Bear": 55,
+      "Breed Clip": 60
+    },
+    {
+      "BREED": "Bulldog",
+      "Bath + Tidy": 35,
+      "BT + HS": 52,
+      "Kennel Clip": 52,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Cairn Terrier",
+      "Bath + Tidy": 35,
+      "BT + HS": 40,
+      "Kennel Clip": 45,
+      "Teddy Bear": 55,
+      "Breed Clip": 66
+    },
+    {
+      "BREED": "Cavalier King Charles Spaniel",
+      "Bath + Tidy": 35,
+      "BT + HS": 52,
+      "Kennel Clip": 45,
+      "Teddy Bear": 55,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Chihuahua (Long Hair)",
+      "Bath + Tidy": 35,
+      "BT + HS": 52,
+      "Kennel Clip": 45,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Chinese Crested (Powderpuff)",
+      "Bath + Tidy": 35,
+      "BT + HS": 52,
+      "Kennel Clip": 45,
+      "Teddy Bear": 55,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Corgi",
+      "Bath + Tidy": 35,
+      "BT + HS": 52,
+      "Kennel Clip": 45,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    }
+  ],
+  "medium_service": [
+    {
+      "BREED": "Golden Retriever",
+      "Bath + Tidy": 45,
+      "BT + HS": 50,
+      "Kennel Clip": 52,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Affen Pinscher ",
+      "Bath + Tidy": 45,
+      "BT + HS": 52,
+      "Kennel Clip": 50,
+      "Teddy Bear": 65,
+      "Breed Clip": 75
+    },
+    {
+      "BREED": "Basenji",
+      "Bath + Tidy": 45,
+      "BT + HS": 50,
+      "Kennel Clip": 55,
+      "Teddy Bear": 55,
+      "Breed Clip": 65
+    },
+    {
+      "BREED": "Basset",
+      "Bath + Tidy": 45,
+      "BT + HS": 50,
+      "Kennel Clip": 55,
+      "Teddy Bear": 55,
+      "Breed Clip": 60
+    },
+    {
+      "BREED": "Bedlington",
+      "Bath + Tidy": 45,
+      "BT + HS": 52,
+      "Kennel Clip": 52,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Border Collie",
+      "Bath + Tidy": 45,
+      "BT + HS": 50,
+      "Kennel Clip": 55,
+      "Teddy Bear": 55,
+      "Breed Clip": 66
+    },
+    {
+      "BREED": "Cocker Spaniel",
+      "Bath + Tidy": 45,
+      "BT + HS": 52,
+      "Kennel Clip": 55,
+      "Teddy Bear": 55,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "English Cocker Spaniel",
+      "Bath + Tidy": 45,
+      "BT + HS": 52,
+      "Kennel Clip": 55,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Nova Scotia Duck Toller",
+      "Bath + Tidy": 45,
+      "BT + HS": 52,
+      "Kennel Clip": 85,
+      "Teddy Bear": 95,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Poodle",
+      "Bath + Tidy": 45,
+      "BT + HS": 52,
+      "Kennel Clip": 45,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    }
+  ],
+  "large_service": [
+    {
+      "BREED": "Keeshond",
+      "Bath + Tidy": 80,
+      "BT + HS": 52,
+      "Kennel Clip": 90,
+      "Teddy Bear": 100,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Poodle (Standard)",
+      "Bath + Tidy": 50,
+      "BT + HS": 52,
+      "Kennel Clip": 65,
+      "Teddy Bear": 80,
+      "Breed Clip": 90
+    },
+    {
+      "BREED": "Schnauzer (Standard)",
+      "Bath + Tidy": 55,
+      "BT + HS": 50,
+      "Kennel Clip": 55,
+      "Teddy Bear": 65,
+      "Breed Clip": 75
+    },
+    {
+      "BREED": "Scottish Terrier",
+      "Bath + Tidy": 55,
+      "BT + HS": 50,
+      "Kennel Clip": 55,
+      "Teddy Bear": 65,
+      "Breed Clip": 60
+    },
+    {
+      "BREED": "Sheltie (Large)",
+      "Bath + Tidy": 55,
+      "BT + HS": 52,
+      "Kennel Clip": 55,
+      "Teddy Bear": 65,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Shiba Inu",
+      "Bath + Tidy": 50,
+      "BT + HS": 52,
+      "Kennel Clip": 52,
+      "Teddy Bear": 52,
+      "Breed Clip": 52
+    },
+    {
+      "BREED": "Shih Tzu",
+      "Bath + Tidy": 55,
+      "BT + HS": 52,
+      "Kennel Clip": 55,
+      "Teddy Bear": 65,
+      "Breed Clip": 70
+    },
+    {
+      "BREED": "Welsh Springer Spaniel",
+      "Bath + Tidy": 55,
+      "BT + HS": 60,
+      "Kennel Clip": 65,
+      "Teddy Bear": 75,
+      "Breed Clip": 80
+    },
+    {
+      "BREED": "West Highland White",
+      "Bath + Tidy": 55,
+      "BT + HS": 60,
+      "Kennel Clip": 75,
+      "Teddy Bear": 75,
+      "Breed Clip": 80
+    },
+    {
+      "BREED": "Wheaten Terrier",
+      "Bath + Tidy": 55,
+      "BT + HS": 52,
+      "Kennel Clip": 60,
+      "Teddy Bear": 65,
+      "Breed Clip": 75
+    }
+  ]
+}

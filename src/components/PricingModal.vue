@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import LaCarte from "./LaCarte.vue";
+import pricingData from "../data/carte_service.json";
 
 export default defineComponent({
   props: {
@@ -26,6 +27,7 @@ export default defineComponent({
   },
   components: { LaCarte },
 });
+console.log(pricingData);
 </script>
 <template>
   <div class="modal-background"></div>
