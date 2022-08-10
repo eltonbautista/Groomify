@@ -20,6 +20,7 @@ export default defineComponent({
   components: { LaCarte, StylingService },
 });
 // NOTE: PricingModal goes into the MyPricing page
+// Pressing one of the "Learn More" buttons in MyPricing will pass a "small", "medium", or "large" to breedServicesConditional
 // TODO: Make .styling-services-wrapper DRY
 </script>
 <template>
