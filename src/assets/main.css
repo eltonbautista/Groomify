@@ -84,3 +84,7 @@ a,
 }
 
 /* Styling for sections */
+
+.service-wrapper:nth-child(1n + 2)>div>div>p::before {
+  content: "$";
+}
