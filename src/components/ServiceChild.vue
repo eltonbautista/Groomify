@@ -9,9 +9,7 @@ export default defineComponent({
 </script>
 <template>
   <div class="service-child-wrap">
-    <p class="service-child-text">
-      {{ text }}
-    </p>
+    <p class="service-child-text">{{ text }}</p>
   </div>
 </template>
 <style lang="scss" scoped>

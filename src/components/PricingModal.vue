@@ -105,7 +105,7 @@ export default defineComponent({
   justify-items: center;
 
   * {
-    border: 1px solid black;
+    /* outline: 1px solid black; */
   }
 }
 
@@ -114,6 +114,12 @@ export default defineComponent({
   grid-template-columns: repeat(14, 1fr);
   height: 90vh;
   grid-template-rows: repeat(12, 1fr);
+  background-color: var(--bg-color-v1);
+  padding: 0 2em 2em 2em;
+
+  h2 {
+    color: var(--color-text-sub);
+  }
 }
 
 .order-form {
@@ -127,6 +133,12 @@ export default defineComponent({
     height: 100%;
     font-size: var(--font-size-xl);
     text-align: center;
+    font-weight: 500;
+    color: var(--color-text-main);
+
+    > em {
+      color: var(--color-text-sub);
+    }
   }
 }
 .carte-wrapper {
@@ -135,10 +147,10 @@ export default defineComponent({
 }
 
 .carousel {
-  grid-area: 3/9/9/15;
+  grid-area: 3/9/8/15;
 }
 .included-wrapper {
-  grid-area: 7/1/9/7;
+  grid-area: 6/1/8/7;
   display: grid;
 
   .included-services {
@@ -163,5 +175,14 @@ export default defineComponent({
   grid-area: 9/1/13/15;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  > div {
+    border: 1px solid black;
+  }
+  > div:nth-child(1n + 1) {
+    border-right: none;
+  }
+  > div:nth-child(6) {
+    border-right: 1px solid black;
+  }
 }
 </style>

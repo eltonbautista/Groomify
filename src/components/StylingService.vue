@@ -45,9 +45,23 @@ export default defineComponent({
 <style lang="scss" scoped>
 .service-wrapper {
   display: grid;
-
   > h3 {
     justify-self: center;
+    color: var(--color-text-sub);
+  }
+}
+
+.service-child-wrapper {
+  display: grid;
+
+  > div:nth-child(1n + 1) {
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+  }
+
+  > div {
+    border: 1px solid black;
   }
 }
 </style>
