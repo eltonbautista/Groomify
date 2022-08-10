@@ -12,7 +12,7 @@ import PricingModal from "../components/PricingModal.vue";
     <MyAbout />
     <MyPricing />
     <MyContact /> -->
-    <PricingModal />
+    <PricingModal :breed-services-conditional="'medium'" />
   </main>
 </template>
 
