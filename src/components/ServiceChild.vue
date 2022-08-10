@@ -3,13 +3,15 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
-    text: String,
+    text: [String, Number],
   },
 });
 </script>
 <template>
   <div class="service-child-wrap">
-    <p class="service-child-text"></p>
+    <p class="service-child-text">
+      {{ text }}
+    </p>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -17,6 +19,7 @@ export default defineComponent({
   max-width: 100%;
 }
 .service-child-text {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
+  text-align: center;
 }
 </style>

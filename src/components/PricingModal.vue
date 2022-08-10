@@ -2,7 +2,6 @@
 import { defineComponent } from "vue";
 import LaCarte from "./LaCarte.vue";
 import pricingData from "../data/carte_service.json";
-import ServiceChild from "./ServiceChild.vue";
 import StylingService from "./StylingService.vue";
 
 export default defineComponent({
@@ -18,8 +17,10 @@ export default defineComponent({
       includedServices: pricingData.includedServices,
     };
   },
-  components: { LaCarte, ServiceChild, StylingService },
+  components: { LaCarte, StylingService },
 });
+// NOTE: PricingModal goes into the MyPricing page
+// TODO: Make .styling-services-wrapper DRY
 </script>
 <template>
   <div class="modal-background"></div>
@@ -53,11 +54,40 @@ export default defineComponent({
             </div>
           </ul>
         </div>
-        <div class="styling-services-wrapper">
+        <div
+          class="styling-services-wrapper"
+          v-if="breedServicesConditional === 'small'"
+        >
           <StylingService
             v-for="(obj, index) in smallServices.slice(0, 6)"
             :styling-service="Object.keys(obj)[index]"
             :key="index"
+            :information="smallServices"
+            :object-index="index"
+          />
+        </div>
+        <div
+          class="styling-services-wrapper"
+          v-else-if="breedServicesConditional === 'medium'"
+        >
+          <StylingService
+            v-for="(obj, index) in mediumServices.slice(0, 6)"
+            :styling-service="Object.keys(obj)[index]"
+            :key="index"
+            :information="mediumServices"
+            :object-index="index"
+          />
+        </div>
+        <div
+          class="styling-services-wrapper"
+          v-else-if="breedServicesConditional === 'large'"
+        >
+          <StylingService
+            v-for="(obj, index) in largeServices.slice(0, 6)"
+            :styling-service="Object.keys(obj)[index]"
+            :key="index"
+            :information="largeServices"
+            :object-index="index"
           />
         </div>
       </div>
