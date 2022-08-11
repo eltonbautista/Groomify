@@ -4,6 +4,7 @@ import MyAbout from "../components/MyAbout.vue";
 import MyContact from "../components/MyContact.vue";
 import MyPricing from "../components/MyPricing.vue";
 import PricingModal from "../components/PricingModal.vue";
+import HelcimCarousel from "../components/HelcimCarousel.vue";
 </script>
 <!-- Please add About and Pricing components just under <TheWelcome />. Make sure to follow TheWelcome's syntax! -->
 <template>
@@ -12,7 +13,8 @@ import PricingModal from "../components/PricingModal.vue";
     <MyAbout />
     <MyPricing />
     <MyContact /> -->
-    <PricingModal :breed-services-conditional="'medium'" />
+    <!-- <PricingModal :breed-services-conditional="'medium'" /> -->
+    <HelcimCarousel />
   </main>
 </template>
 
