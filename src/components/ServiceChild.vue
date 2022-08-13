@@ -15,13 +15,19 @@ export default defineComponent({
 <style lang="scss" scoped>
 .service-child-wrap {
   max-width: 100%;
+  display: grid;
+  align-items: center;
 }
 .service-child-text {
   font-size: var(--font-size-sm);
   text-align: center;
 
   @media screen and (max-width: 768px) {
-    font-size: 0.75em;
+    font-size: 0.9em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0.5em;
   }
 }
 </style>

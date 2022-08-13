@@ -162,6 +162,63 @@ export default defineComponent({
     margin: 0 2em;
   }
 
+  @media screen and (max-width: 767px) {
+    grid-area: 2/1/7/9;
+
+    .pricing-modal {
+      grid-template-rows: repeat(5, auto);
+
+      .modal-header-wrapper {
+        > button {
+          left: 93%;
+          padding-top: 0.5em;
+          font-size: var(--font-size-sm);
+        }
+      }
+      .carte-wrapper {
+        grid-area: 2/1/3/15;
+        /* grid-template-rows: 0.2fr repeat(5, auto); */
+        align-content: start;
+        height: fit-content;
+        gap: 1em;
+        > h2 {
+          height: fit-content;
+        }
+        > div {
+          height: fit-content;
+        }
+      }
+      .legend {
+        grid-area: 3/1/4/14;
+
+        p {
+          margin-top: 0.2em;
+          font-size: 0.7em;
+          overflow: visible;
+          text-overflow: ellipsis;
+          white-space: normal;
+        }
+      }
+      .included-wrapper {
+        grid-area: 4/1/5/14;
+        grid-auto-rows: auto 1fr;
+        padding-bottom: 1em;
+        > h2 {
+          padding-bottom: 0.2em;
+        }
+      }
+
+      .styling-services-wrapper {
+        grid-area: 5/1/7/15;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid black;
+        * {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+
   * {
     color: var(--color-text-main);
   }
@@ -176,10 +233,11 @@ export default defineComponent({
 .pricing-modal {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: auto repeat(12, 1fr);
   background-color: var(--bg-color-about);
   padding: 0 2em 2em 2em;
   border-radius: 1em;
+  height: 100%;
 }
 
 .order-form {
@@ -268,6 +326,27 @@ export default defineComponent({
   }
   > div:nth-child(6) {
     border-right: 1px solid var(--color-text-main);
+  }
+
+  @media screen and (max-width: 767px) {
+    > div {
+      border: 1px solid black;
+    }
+    > div:nth-child(3n + 1) {
+      border-left: none;
+    }
+    > div:nth-child(1),
+    div:nth-child(2),
+    div:nth-child(3) {
+      border-top: none;
+    }
+    > div:nth-child(1n + 1) {
+      border-right: none;
+      border-bottom: none;
+    }
+    > div:nth-child(6) {
+      border-right: none;
+    }
   }
 }
 </style>

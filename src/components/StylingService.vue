@@ -48,6 +48,15 @@ export default defineComponent({
   > h3 {
     justify-self: center;
     color: var(--color-text-main);
+    height: fit-content;
+    align-self: center;
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-rows: 0.1fr 1fr;
+    > h3 {
+      font-size: var(--font-size-sm);
+    }
   }
 }
 

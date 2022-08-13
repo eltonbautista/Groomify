@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 <template>
   <section :class="`container ${pricing}`">
-    <div class="grid">
+    <div :class="`grid ${pricing}`">
       <header :class="`banner ${pricing}`">
         <h1>We&nbsp;<em> match </em>&nbsp;our prices!</h1>
       </header>
@@ -107,6 +107,13 @@ export default defineComponent({
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto 1fr;
     gap: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+.grid.visible {
+  @media screen and (max-width: 767px) {
+    grid-template-rows: repeat(6, 1fr);
   }
 }
 
