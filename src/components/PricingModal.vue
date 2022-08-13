@@ -40,7 +40,61 @@ export default defineComponent({
             :la-carte="service"
           />
         </div>
-        <div class="carousel"></div>
+        <div class="legend">
+          <h2><em>Legend</em></h2>
+
+          <div>
+            <h5>Bath and Tidy (BT)</h5>
+            <p>
+              It's not always necessary to give a complete haircut at every
+              visit. I provide a service called a Bath and Tidy. A Bath and Tidy
+              consists of: bath, blow dry, brushed and combed, nails trimmed,
+              cleaning of the ears, clearing hair from the groin and bum, light
+              trim on the feet and feathering's, and cleaning up around the eyes
+              and face.
+            </p>
+          </div>
+
+          <div>
+            <h5>Hand Strip (HS)</h5>
+            <p>
+              Handstripping is generally done on wire coat breeds and involves
+              pulling the dead hair out, instead of clipping, with a special
+              stripping knife so a new wire coat can grow in. Although it may
+              sound painful, I assure you, when done properly, it is not. Wire
+              hair is not attached like our own hair or breeds with other types
+              of coats.
+            </p>
+          </div>
+          <div>
+            <h5>BT + HS</h5>
+            <p>As above, but also includes a light hand strip of the saddle.</p>
+          </div>
+          <div>
+            <h5>Kennel Clip</h5>
+            <p>
+              A kennel clip leaves the entire body one length, leaving the head,
+              face, and tail to scissor clip. Kennel clips are clipper cut from
+              1/4" down to 1/16" finished length. Clips shorter than 1/16" are
+              only performed on extremely matted dogs when there is no other
+              alternative.
+            </p>
+          </div>
+          <div>
+            <h5>Teddy Bear</h5>
+            <p>
+              A Teddy Bear cut is scissor cut 1/2" or longer and gives the dog
+              that "long and fluffy" look.
+            </p>
+          </div>
+          <div>
+            <h5>Breed Clip</h5>
+            <p>
+              Breed Clips are breed specific cuts and are either scissored or
+              clipper cut as required.
+            </p>
+          </div>
+        </div>
         <div class="included-wrapper">
           <h2><em>Included</em></h2>
           <ul class="included-services">
@@ -103,10 +157,6 @@ export default defineComponent({
 .pricing-modal-wrapper {
   display: grid;
   justify-items: center;
-
-  * {
-    /* outline: 1px solid black; */
-  }
 }
 
 .pricing-modal {
@@ -146,8 +196,22 @@ export default defineComponent({
   display: grid;
 }
 
-.carousel {
-  grid-area: 3/9/8/15;
+.legend {
+  grid-area: 3/7/8/15;
+  position: relative;
+
+  p {
+    font-size: 0.7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  p:hover {
+    font-size: 0.9em;
+    overflow: visible;
+    white-space: normal;
+  }
 }
 .included-wrapper {
   grid-area: 6/1/8/7;
