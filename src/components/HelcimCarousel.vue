@@ -34,11 +34,8 @@ export default defineComponent({
     // Main function of carousel logic.
     carousel(dir: string) {
       // dir controls direction of carousel
-      if (dir == "next") {
-        this.count += 1;
-      } else if (dir == "previous") {
-        this.count -= 1;
-      }
+      dir === "next" ? (this.count += 1) : (this.count -= 1);
+
       // sets left & right counters
       if (this.count == this.cards.length - 1) {
         this.right = 0;
