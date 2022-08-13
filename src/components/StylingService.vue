@@ -47,7 +47,7 @@ export default defineComponent({
   display: grid;
   > h3 {
     justify-self: center;
-    color: var(--color-text-sub);
+    color: var(--color-text-main);
   }
 }
 
@@ -61,7 +61,7 @@ export default defineComponent({
   }
 
   > div {
-    border: 1px solid var(--color-text-accent-v2);
+    border: 1px solid var(--color-text-main);
   }
 }
 </style>

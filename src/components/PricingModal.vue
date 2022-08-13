@@ -3,7 +3,6 @@ import { defineComponent } from "vue";
 import LaCarte from "./LaCarte.vue";
 import pricingData from "../data/carte_service.json";
 import StylingService from "./StylingService.vue";
-import MainButton from "./MainButton.vue";
 
 export default defineComponent({
   props: {
@@ -22,7 +21,7 @@ export default defineComponent({
       includedServices: pricingData.includedServices,
     };
   },
-  components: { LaCarte, StylingService, MainButton },
+  components: { LaCarte, StylingService },
 });
 </script>
 <template>
@@ -30,8 +29,8 @@ export default defineComponent({
     <form class="order-form">
       <div class="pricing-modal">
         <div class="modal-header-wrapper">
-          <h1 class="modal-header">My <em>Salon</em></h1>
-          <MainButton :button-text="'Close'" @click="togglePricing('')" />
+          <h1 class="modal-header">My <em>salon</em></h1>
+          <button @click="togglePricing('')" type="button">Close</button>
         </div>
         <div class="carte-wrapper">
           <h2 class="carte-header"><em>A La Carte</em></h2>
@@ -154,30 +153,33 @@ export default defineComponent({
 .pricing-modal-wrapper {
   display: grid;
   justify-items: center;
-  grid-area: 2/2/7/14;
+  grid-area: 2/1/7/15;
+  margin-top: 3em;
   z-index: 5;
 
+  @media screen and (max-width: 768px) {
+    grid-area: 2/1/3/9;
+    margin: 0 2em;
+  }
+
   * {
-    color: var(--color-text-accent-v2);
+    color: var(--color-text-main);
   }
   em {
-    color: var(--color-text-sub);
+    color: var(--color-text-main);
   }
 }
 .pricing-modal-wrapper.hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .pricing-modal {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  background-color: var(--homepage-gradient-one);
+  background-color: var(--bg-color-about);
   padding: 0 2em 2em 2em;
-
-  h2 {
-    color: var(--color-text-sub);
-  }
+  border-radius: 1em;
 }
 
 .order-form {
@@ -189,6 +191,7 @@ export default defineComponent({
   grid-area: 1/1/2/15;
   display: grid;
   grid-template-columns: 1fr auto;
+  position: relative;
   > h1 {
     height: 100%;
     font-size: var(--font-size-xl);
@@ -197,8 +200,16 @@ export default defineComponent({
     color: var(--color-text-accent-v2);
 
     > em {
-      color: var(--color-text-sub);
+      color: var(--color-text-main);
     }
+  }
+  > button {
+    background: none;
+    border: none;
+    font-size: var(--font-size-base);
+    position: absolute;
+    left: 95%;
+    padding-top: 1em;
   }
 }
 .carte-wrapper {
@@ -250,13 +261,13 @@ export default defineComponent({
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   > div {
-    border: 1px solid var(--color-text-accent-v2);
+    border: 1px solid var(--color-text-main);
   }
   > div:nth-child(1n + 1) {
     border-right: none;
   }
   > div:nth-child(6) {
-    border-right: 1px solid var(--color-text-accent-v2);
+    border-right: 1px solid var(--color-text-main);
   }
 }
 </style>

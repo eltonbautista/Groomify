@@ -71,7 +71,6 @@ export default defineComponent({
   grid-template-rows: repeat(6, 1fr);
   background: var(--bg-color-about);
   border-radius: 0.5em;
-  box-shadow: 0 0 0.5em 0.025em gray;
 
   > button {
     grid-area: 6/1/7/5;
@@ -93,6 +92,10 @@ export default defineComponent({
       align-items: center;
     }
   }
+}
+
+.price-display-wrap.visible {
+  display: none;
 }
 
 .small {

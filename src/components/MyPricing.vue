@@ -5,6 +5,7 @@ import husky from "../assets/contact-dog.png";
 import golden from "../assets/golden.png";
 import PricingModal from "./PricingModal.vue";
 import PricingCard from "./PricingCard.vue";
+import { pcd } from "../data/data-abstracted";
 export default defineComponent({
   data() {
     return {
@@ -16,43 +17,19 @@ export default defineComponent({
       size: "",
       pricingCardData: [
         {
-          displayInformation: {
-            dogSize: "Small",
-            breeds: {
-              one: "Bichon, Boston Terrier",
-              two: "Chihuahua, Pekingese",
-              three: "Shih Tzu, Yorkshire Terrier",
-            },
-            price: "35",
-          },
+          displayInformation: pcd[0],
           imgSrc: shihtzu,
           togglePricing: this.togglePricing,
           class: "small",
         },
         {
-          displayInformation: {
-            dogSize: "Medium",
-            breeds: {
-              one: "Australian Shepherd, Beagle",
-              two: "Cocker Spaniel, Vizsla",
-              three: "Poodle, German Pinscher",
-            },
-            price: "45",
-          },
+          displayInformation: pcd[1],
           imgSrc: golden,
           togglePricing: this.togglePricing,
           class: "medium",
         },
         {
-          displayInformation: {
-            dogSize: "Large",
-            breeds: {
-              one: "Samoyed, Golden Retriever",
-              two: "Dalmatian, Boxer",
-              three: "German Shepherd, Husky",
-            },
-            price: "50",
-          },
+          displayInformation: pcd[2],
           imgSrc: husky,
           togglePricing: this.togglePricing,
           class: "large",
@@ -91,7 +68,7 @@ export default defineComponent({
         :display-information="data.displayInformation"
         :imgSrc="data.imgSrc"
         :togglePricing="data.togglePricing"
-        :class="data.class"
+        :class="`${data.class} ${pricing}`"
       />
       <PricingModal
         :class="`${pricing}`"
@@ -109,13 +86,13 @@ export default defineComponent({
 }
 
 .container.visible {
-  background: var(--homepage-gradient-one);
+  background: var(--bg-color-v1);
 }
 
 .banner.visible {
-  color: var(--color-text-sub);
+  color: var(--color-text-main);
   em {
-    color: var(--color-text-accent-v2);
+    color: var(--color-text-sub);
   }
 }
 
@@ -125,7 +102,6 @@ export default defineComponent({
   grid-template-rows: repeat(7, 1fr);
   max-width: var(--max-width);
   gap: 1em;
-  margin-bottom: 3em;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(8, 1fr);

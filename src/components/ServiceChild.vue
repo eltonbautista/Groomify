@@ -19,5 +19,9 @@ export default defineComponent({
 .service-child-text {
   font-size: var(--font-size-sm);
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.75em;
+  }
 }
 </style>
