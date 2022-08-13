@@ -16,8 +16,8 @@ export default defineComponent({
           <span><em>Woof</em> there ever be a</span>
           <span> better time than <em>m</em></span>
           <span><em>eow?</em> <em>Grrrive</em> them a</span>
-          <span>n experience th</span>
-          <span>ey deserve. They <em>arf</em> yo</span>
+          <span> <em> scents</em> of</span>
+          <span> liberty. They <em>arf</em> yo</span>
           <span>ur best friend after all!</span>
         </h1>
         <p>
@@ -65,7 +65,7 @@ export default defineComponent({
   grid-template-columns: repeat(12, 1fr);
   margin: auto;
   grid-template-rows: repeat(1, 1fr);
-  padding-bottom: 3em;
+  padding-bottom: 5em;
 
   .main-headline-text {
     grid-area: 1/1/2/6;
