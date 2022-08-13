@@ -46,7 +46,7 @@ export default defineComponent({
     letter-spacing: 0.02em;
     text-shadow: 0 3px 5px gray;
     font-family: Pattaya, RHD, sans-serif;
-    padding-left: 5em;
+    margin-left: 5em;
   }
 }
 </style>

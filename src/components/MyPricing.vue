@@ -4,26 +4,38 @@ import PricingDisplay from "./PricingDisplay.vue";
 import shihtzu from "../assets/shih-tzu.png";
 import husky from "../assets/contact-dog.png";
 import golden from "../assets/golden.png";
+import PricingModal from "./PricingModal.vue";
 export default defineComponent({
   data() {
     return {
       shihtzu,
       husky,
       golden,
+      showPricing: false,
     };
+  },
+  computed: {
+    pricing() {
+      return this.showPricing ? "visible" : "hidden";
+    },
+  },
+  methods: {
+    togglePricing() {
+      this.showPricing = !this.showPricing;
+    },
   },
   props: {
     buttonText: String,
     backgroundColor: String,
     textColor: String,
   },
-  components: { PricingDisplay },
+  components: { PricingDisplay, PricingModal },
 });
 </script>
 <template>
-  <section class="container">
+  <section :class="`container ${pricing}`">
     <div class="grid">
-      <header class="banner">
+      <header :class="`banner ${pricing}`">
         <h1>We&nbsp;<em> match </em>&nbsp;our prices!</h1>
       </header>
       <PricingDisplay
@@ -37,6 +49,7 @@ export default defineComponent({
           price: '35',
         }"
         :imgSrc="shihtzu"
+        :togglePricing="togglePricing"
         class="small"
       />
       <PricingDisplay
@@ -50,6 +63,7 @@ export default defineComponent({
           price: '60',
         }"
         :imgSrc="golden"
+        :togglePricing="togglePricing"
         class="medium"
       />
       <PricingDisplay
@@ -63,8 +77,16 @@ export default defineComponent({
           price: '80',
         }"
         :imgSrc="husky"
+        :togglePricing="togglePricing"
         class="large"
       />
+      <!-- TODO: figure out how to pass different strings to breed-services-conditional depending on button clicked. 
+      I think I can use Emits for this. -->
+      <PricingModal
+        :class="`${pricing}`"
+        :breed-services-conditional="'medium'"
+      />
+      <button @click="togglePricing"></button>
     </div>
   </section>
 </template>
@@ -73,6 +95,17 @@ export default defineComponent({
   background-color: var(--bg-color-v1);
   display: grid;
   justify-items: center;
+}
+
+.container.visible {
+  background: var(--homepage-gradient-one);
+}
+
+.banner.visible {
+  color: var(--color-text-sub);
+  em {
+    color: var(--color-text-accent-v2);
+  }
 }
 
 .grid {

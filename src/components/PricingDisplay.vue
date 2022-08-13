@@ -20,6 +20,7 @@ export default defineComponent({
     },
     imgSrc: String,
     area: String,
+    togglePricing: Function,
   },
   computed: {
     cssProps() {
@@ -53,6 +54,7 @@ export default defineComponent({
       button-text="Learn More &nbsp; &rarrw;"
       background-color="var(--color-text-main)"
       text-color="var(--bg-color-v1)"
+      @click="togglePricing"
     />
   </div>
 </template>
@@ -63,7 +65,7 @@ export default defineComponent({
   grid-template-rows: repeat(6, 1fr);
   background: var(--bg-color-about);
   border-radius: 0.5em;
-  box-shadow: 0 0 0.5em 0.2em gray;
+  box-shadow: 0 0 0.5em 0.025em gray;
 
   > button {
     grid-area: 6/1/7/5;
@@ -122,7 +124,7 @@ export default defineComponent({
   > img {
     max-width: 100%;
     max-height: 100%;
-    z-index: 5;
+    z-index: 1;
     padding-top: 2em;
   }
 }

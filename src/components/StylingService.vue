@@ -61,7 +61,7 @@ export default defineComponent({
   }
 
   > div {
-    border: 1px solid black;
+    border: 1px solid var(--color-text-accent-v2);
   }
 }
 </style>

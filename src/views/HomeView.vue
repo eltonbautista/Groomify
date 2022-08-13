@@ -8,11 +8,11 @@ import PricingModal from "../components/PricingModal.vue";
 <!-- Please add About and Pricing components just under <TheWelcome />. Make sure to follow TheWelcome's syntax! -->
 <template>
   <main>
-    <!-- <MyHero />
+    <MyHero />
     <MyAbout />
     <MyPricing />
-    <MyContact /> -->
-    <PricingModal :breed-services-conditional="'medium'" />
+    <MyContact />
+    <!-- <PricingModal :breed-services-conditional="'medium'" /> -->
   </main>
 </template>
 

@@ -24,8 +24,6 @@ export default defineComponent({
 // TODO: Make .styling-services-wrapper DRY
 </script>
 <template>
-  <div class="modal-background"></div>
-
   <div class="pricing-modal-wrapper">
     <form class="order-form">
       <div class="pricing-modal">
@@ -150,21 +148,28 @@ export default defineComponent({
   </div>
 </template>
 <style lang="scss" scoped>
-.modal-background {
-  position: absolute;
-  background: blue;
-}
 .pricing-modal-wrapper {
   display: grid;
   justify-items: center;
+  grid-area: 2/2/7/14;
+  z-index: 5;
+
+  * {
+    color: var(--color-text-accent-v2);
+  }
+  em {
+    color: var(--color-text-sub);
+  }
+}
+.pricing-modal-wrapper.hidden {
+  visibility: hidden;
 }
 
 .pricing-modal {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  height: 90vh;
   grid-template-rows: repeat(12, 1fr);
-  background-color: var(--bg-color-v1);
+  background-color: var(--homepage-gradient-one);
   padding: 0 2em 2em 2em;
 
   h2 {
@@ -184,7 +189,7 @@ export default defineComponent({
     font-size: var(--font-size-xl);
     text-align: center;
     font-weight: 500;
-    color: var(--color-text-main);
+    color: var(--color-text-accent-v2);
 
     > em {
       color: var(--color-text-sub);
@@ -240,13 +245,13 @@ export default defineComponent({
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   > div {
-    border: 1px solid black;
+    border: 1px solid var(--color-text-accent-v2);
   }
   > div:nth-child(1n + 1) {
     border-right: none;
   }
   > div:nth-child(6) {
-    border-right: 1px solid black;
+    border-right: 1px solid var(--color-text-accent-v2);
   }
 }
 </style>
