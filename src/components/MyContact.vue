@@ -73,15 +73,19 @@ export default defineComponent({
   grid-template-areas: "image text";
   grid-template-rows: 1fr;
   grid-template-columns: 37.5rem 1fr;
-}
-@media screen and (max-width: 75rem) {
-  .contact {
+  padding-bottom: 5em;
+
+  @media screen and (max-width: 75rem) {
     margin: 0;
     grid-template-areas:
       "text"
       "image";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 1024px) and (min-height: 1023px) {
+    padding-bottom: 10em;
   }
 }
 .contact-image {
