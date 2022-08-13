@@ -1,10 +1,10 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import PricingDisplay from "./PricingDisplay.vue";
 import shihtzu from "../assets/shih-tzu.png";
 import husky from "../assets/contact-dog.png";
 import golden from "../assets/golden.png";
 import PricingModal from "./PricingModal.vue";
+import PricingCard from "./PricingCard.vue";
 export default defineComponent({
   data() {
     return {
@@ -12,6 +12,52 @@ export default defineComponent({
       husky,
       golden,
       showPricing: false,
+      dataModel: "",
+      size: "",
+      pricingCardData: [
+        {
+          displayInformation: {
+            dogSize: "Small",
+            breeds: {
+              one: "Bichon, Boston Terrier",
+              two: "Chihuahua, Pekingese",
+              three: "Shih Tzu, Yorkshire Terrier",
+            },
+            price: "35",
+          },
+          imgSrc: shihtzu,
+          togglePricing: this.togglePricing,
+          class: "small",
+        },
+        {
+          displayInformation: {
+            dogSize: "Medium",
+            breeds: {
+              one: "Australian Shepherd, Beagle",
+              two: "Cocker Spaniel, Vizsla",
+              three: "Poodle, German Pinscher",
+            },
+            price: "45",
+          },
+          imgSrc: golden,
+          togglePricing: this.togglePricing,
+          class: "medium",
+        },
+        {
+          displayInformation: {
+            dogSize: "Large",
+            breeds: {
+              one: "Samoyed, Golden Retriever",
+              two: "Dalmatian, Boxer",
+              three: "German Shepherd, Husky",
+            },
+            price: "50",
+          },
+          imgSrc: husky,
+          togglePricing: this.togglePricing,
+          class: "large",
+        },
+      ],
     };
   },
   computed: {
@@ -20,8 +66,9 @@ export default defineComponent({
     },
   },
   methods: {
-    togglePricing() {
+    togglePricing(si: string) {
       this.showPricing = !this.showPricing;
+      this.size = si;
     },
   },
   props: {
@@ -29,7 +76,7 @@ export default defineComponent({
     backgroundColor: String,
     textColor: String,
   },
-  components: { PricingDisplay, PricingModal },
+  components: { PricingCard, PricingModal },
 });
 </script>
 <template>
@@ -38,55 +85,19 @@ export default defineComponent({
       <header :class="`banner ${pricing}`">
         <h1>We&nbsp;<em> match </em>&nbsp;our prices!</h1>
       </header>
-      <PricingDisplay
-        :display-information="{
-          dogSize: 'Small',
-          breeds: {
-            one: 'Bichon, Boston Terrier',
-            two: 'Chihuahua, Pekingese',
-            three: 'Shih Tzu, Yorkshire Terrier',
-          },
-          price: '35',
-        }"
-        :imgSrc="shihtzu"
-        :togglePricing="togglePricing"
-        class="small"
+      <PricingCard
+        v-for="(data, index) in pricingCardData"
+        :key="index"
+        :display-information="data.displayInformation"
+        :imgSrc="data.imgSrc"
+        :togglePricing="data.togglePricing"
+        :class="data.class"
       />
-      <PricingDisplay
-        :display-information="{
-          dogSize: 'Medium',
-          breeds: {
-            one: 'Australian Shepherd, Beagle',
-            two: 'Cocker Spaniel, Vizsla',
-            three: 'Poodle, German Pinscher',
-          },
-          price: '60',
-        }"
-        :imgSrc="golden"
-        :togglePricing="togglePricing"
-        class="medium"
-      />
-      <PricingDisplay
-        :display-information="{
-          dogSize: 'Large',
-          breeds: {
-            one: 'Samoyed, Golden Retriever',
-            two: 'Dalmatian, Boxer',
-            three: 'German Shepherd, Husky',
-          },
-          price: '80',
-        }"
-        :imgSrc="husky"
-        :togglePricing="togglePricing"
-        class="large"
-      />
-      <!-- TODO: figure out how to pass different strings to breed-services-conditional depending on button clicked. 
-      I think I can use Emits for this. -->
       <PricingModal
         :class="`${pricing}`"
-        :breed-services-conditional="'medium'"
+        :breed-services-conditional="size"
+        :togglePricing="togglePricing"
       />
-      <button @click="togglePricing"></button>
     </div>
   </section>
 </template>

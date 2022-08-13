@@ -3,10 +3,15 @@ import { defineComponent } from "vue";
 import LaCarte from "./LaCarte.vue";
 import pricingData from "../data/carte_service.json";
 import StylingService from "./StylingService.vue";
+import MainButton from "./MainButton.vue";
 
 export default defineComponent({
   props: {
     breedServicesConditional: String,
+    togglePricing: {
+      required: true,
+      type: Function,
+    },
   },
   data() {
     return {
@@ -17,11 +22,8 @@ export default defineComponent({
       includedServices: pricingData.includedServices,
     };
   },
-  components: { LaCarte, StylingService },
+  components: { LaCarte, StylingService, MainButton },
 });
-// NOTE: PricingModal goes into the MyPricing page
-// Pressing one of the "Learn More" buttons in MyPricing will pass a "small", "medium", or "large" to breedServicesConditional
-// TODO: Make .styling-services-wrapper DRY
 </script>
 <template>
   <div class="pricing-modal-wrapper">
@@ -29,6 +31,7 @@ export default defineComponent({
       <div class="pricing-modal">
         <div class="modal-header-wrapper">
           <h1 class="modal-header">My <em>Salon</em></h1>
+          <MainButton :button-text="'Close'" @click="togglePricing('')" />
         </div>
         <div class="carte-wrapper">
           <h2 class="carte-header"><em>A La Carte</em></h2>
@@ -109,7 +112,7 @@ export default defineComponent({
         </div>
         <div
           class="styling-services-wrapper"
-          v-if="breedServicesConditional === 'small'"
+          v-if="breedServicesConditional === 'Small'"
         >
           <StylingService
             v-for="(obj, index) in smallServices.slice(0, 6)"
@@ -121,7 +124,7 @@ export default defineComponent({
         </div>
         <div
           class="styling-services-wrapper"
-          v-else-if="breedServicesConditional === 'medium'"
+          v-else-if="breedServicesConditional === 'Medium'"
         >
           <StylingService
             v-for="(obj, index) in mediumServices.slice(0, 6)"
@@ -133,7 +136,7 @@ export default defineComponent({
         </div>
         <div
           class="styling-services-wrapper"
-          v-else-if="breedServicesConditional === 'large'"
+          v-else-if="breedServicesConditional === 'Large'"
         >
           <StylingService
             v-for="(obj, index) in largeServices.slice(0, 6)"
@@ -183,7 +186,9 @@ export default defineComponent({
 }
 
 .modal-header-wrapper {
-  grid-area: 1/4/2/12;
+  grid-area: 1/1/2/15;
+  display: grid;
+  grid-template-columns: 1fr auto;
   > h1 {
     height: 100%;
     font-size: var(--font-size-xl);

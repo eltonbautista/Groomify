@@ -17,6 +17,7 @@ export default defineComponent({
       'background-color': backgroundColor,
       color: textColor,
     }"
+    type="button"
   >
     {{ buttonText }}
   </button>
