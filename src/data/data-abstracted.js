@@ -28,4 +28,21 @@ const pcd = [
   },
 ];
 
-export { pcd };
+const userReviews = [
+  { reviewer: "Lori Johnson", text: "5 Stars what an awesome company!" },
+  {
+    reviewer: "Kyle Willems",
+    text: "I absolutely love these guys! They took such great care of Prince!",
+  },
+  {
+    reviewer: "Robert Kugler",
+    text: "Sometimes I don't even feel like taking a shower, but these guys could definitely get me through those times!",
+  },
+  {
+    reviewer: "Elton Bautista",
+    text: "I love these guys' energy!!",
+  },
+  { reviewer: "Robert Downey Jr.", text: "Keep going! Never give up!!" },
+];
+const keys = ["committed", "devoted", "faithful", "accustomed", "dedicated"];
+export { pcd, userReviews, keys };

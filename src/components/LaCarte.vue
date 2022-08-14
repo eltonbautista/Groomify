@@ -7,8 +7,6 @@ interface ILaCarteItem {
   isIncluded: boolean;
 }
 
-// TODO: isIncluded to be toggled by checkbox.
-
 export default defineComponent({
   props: {
     laCarte: {
