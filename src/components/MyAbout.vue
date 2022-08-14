@@ -15,7 +15,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="container">
+  <section id="About" class="container">
     <div class="about">
       <div class="about-header">
         <h1>Who&nbsp;<em>we</em>&nbsp;are</h1>

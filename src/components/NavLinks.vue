@@ -4,6 +4,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   props: {
     linkName: String,
+    linkNav: String,
   },
 });
 </script>
@@ -11,7 +12,7 @@ export default defineComponent({
 <template>
   <li class="nav-item">
     <div class="nav-link-wrap">
-      <a class="nav-link">{{ linkName }}</a>
+      <a :href="`#${linkName}`" class="nav-link">{{ linkName }}</a>
     </div>
   </li>
 </template>

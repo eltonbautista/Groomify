@@ -9,7 +9,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="container">
+  <section id="Home Groomify" class="container">
     <div class="hero">
       <div class="main-headline-text">
         <h1>
@@ -182,7 +182,6 @@ export default defineComponent({
   }
 
   /* Any screen from 320px to 767px */
-
   @media screen and (min-width: 320px) and (max-width: 767px) {
     .main-headline-text > h1 > span {
       font-size: calc(var(--font-size-lg) + 0.5em);

@@ -57,7 +57,7 @@ export default defineComponent({
 });
 </script>
 <template>
-  <section :class="`container ${pricing}`">
+  <section id="Pricing" :class="`container ${pricing}`">
     <div :class="`grid ${pricing}`">
       <header :class="`banner ${pricing}`">
         <h1>We&nbsp;<em> match </em>&nbsp;our prices!</h1>

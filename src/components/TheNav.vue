@@ -5,6 +5,7 @@ export default defineComponent({
   data() {
     return {
       links: ["Home", "About", "Pricing"],
+      // linkNavs: ["#home", "#about", "#pricing"],
     };
   },
   components: { NavLinks },
