@@ -157,7 +157,7 @@ export default defineComponent({
     }
 
     .main-headline-image {
-      grid-area: 1/1/13/9;
+      grid-area: 1/2/13/9;
       background-size: 75%;
     }
 
@@ -183,11 +183,14 @@ export default defineComponent({
 
   /* Any screen from 320px to 767px */
   @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding-bottom: 0em;
+
     .main-headline-text > h1 > span {
-      font-size: calc(var(--font-size-lg) + 0.5em);
+      font-size: var(--font-size-xl);
     }
 
     .main-headline-image {
+      grid-area: 1/1/13/9;
       background-size: 100%;
     }
 
