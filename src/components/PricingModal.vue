@@ -327,7 +327,7 @@ export default defineComponent({
 .styling-services-wrapper {
   grid-area: 7/1/11/15;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: auto repeat(6, 1fr);
   > div:nth-child(1n + 1) {
     border-right: none;
   }

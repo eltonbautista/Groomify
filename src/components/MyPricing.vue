@@ -120,7 +120,7 @@ export default defineComponent({
 
 .grid.visible {
   @media screen and (max-width: 767px) {
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: auto repeat(5, 1fr);
   }
 }
 
