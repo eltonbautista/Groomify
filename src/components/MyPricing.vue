@@ -86,7 +86,13 @@ export default defineComponent({
 }
 
 .container.visible {
-  background: var(--bg-color-v1);
+  background: linear-gradient(
+      296.37deg,
+      #ffd494 6.69%,
+      rgba(255, 190, 169, 0) 33.83%
+    ),
+    linear-gradient(129.1deg, #ea8ea4 -1.7%, rgba(253, 229, 178, 0) 72.42%),
+    linear-gradient(26.22deg, #7735e4 2.78%, #da70a9 30.98%, #f3c690 53.17%);
 }
 
 .banner.visible {
@@ -99,9 +105,10 @@ export default defineComponent({
 .grid {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   max-width: var(--max-width);
   gap: 1em;
+  padding-bottom: 5em;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(8, 1fr);

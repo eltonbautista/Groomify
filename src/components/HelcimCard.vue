@@ -29,7 +29,7 @@ export default defineComponent({
   display: grid;
   align-content: center;
   width: 100%;
-  background: var(--bg-color-v1);
+  background: var(--homepage-gradient-one);
   padding: 2em;
   justify-items: center;
   border-radius: 1em;
@@ -49,6 +49,7 @@ export default defineComponent({
     > h3,
     p {
       width: 200px;
+      color: var(--color-text-sub);
     }
 
     @media screen and (max-width: 1024px) {
@@ -61,7 +62,6 @@ export default defineComponent({
       }
       > p {
         font-size: var(--font-size-base);
-        width: 100px;
       }
     }
   }
@@ -81,13 +81,15 @@ export default defineComponent({
   transition-delay: 0ms;
   transform: scale(1.1);
   opacity: 1;
+  /* background: #b191e7; */
 }
 
 .middleAlt {
   transition: 300ms ease-in-out all;
   opacity: 1;
   transform: scale(1);
-  background-color: var(--homepage-gradient-one);
+  /* background-color: var(--homepage-gradient-one); */
+  background: none;
   color: var(--color-text-sub);
 }
 

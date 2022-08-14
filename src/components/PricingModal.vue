@@ -156,6 +156,9 @@ export default defineComponent({
   grid-area: 2/1/7/15;
   margin-top: 3em;
   z-index: 5;
+  border: 3px solid black;
+  border-radius: 1em;
+  padding: 1em;
 
   @media screen and (max-width: 768px) {
     grid-area: 2/1/3/9;
@@ -177,7 +180,6 @@ export default defineComponent({
       }
       .carte-wrapper {
         grid-area: 2/1/3/15;
-        /* grid-template-rows: 0.2fr repeat(5, auto); */
         align-content: start;
         height: fit-content;
         gap: 1em;
@@ -193,7 +195,14 @@ export default defineComponent({
 
         p {
           margin-top: 0.2em;
-          font-size: 0.7em;
+          font-size: var(--font-size-base);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        p:hover {
+          font-size: var(--font-size-base);
           overflow: visible;
           text-overflow: ellipsis;
           white-space: normal;
@@ -203,6 +212,11 @@ export default defineComponent({
         grid-area: 4/1/5/14;
         grid-auto-rows: auto 1fr;
         padding-bottom: 1em;
+
+        li {
+          font-size: var(--font-size-base);
+        }
+
         > h2 {
           padding-bottom: 0.2em;
         }
@@ -210,7 +224,8 @@ export default defineComponent({
 
       .styling-services-wrapper {
         grid-area: 5/1/7/15;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         border: 1px solid black;
         * {
           font-size: 0.7em;
@@ -221,9 +236,10 @@ export default defineComponent({
 
   * {
     color: var(--color-text-main);
+    font-weight: 500;
   }
   em {
-    color: var(--color-text-main);
+    color: var(--color-text-sub);
   }
 }
 .pricing-modal-wrapper.hidden {
@@ -233,8 +249,8 @@ export default defineComponent({
 .pricing-modal {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: auto repeat(12, 1fr);
-  background-color: var(--bg-color-about);
+  grid-template-rows: auto repeat(9, 1fr);
+  background: none;
   padding: 0 2em 2em 2em;
   border-radius: 1em;
   height: 100%;
@@ -250,12 +266,13 @@ export default defineComponent({
   display: grid;
   grid-template-columns: 1fr auto;
   position: relative;
+  padding-bottom: 2em;
   > h1 {
     height: 100%;
     font-size: var(--font-size-xl);
     text-align: center;
     font-weight: 500;
-    color: var(--color-text-accent-v2);
+    color: var(--color-text-sub);
 
     > em {
       color: var(--color-text-main);
@@ -271,29 +288,22 @@ export default defineComponent({
   }
 }
 .carte-wrapper {
-  grid-area: 3/1/6/7;
+  grid-area: 2/1/5/7;
   display: grid;
 }
 
 .legend {
-  grid-area: 3/7/8/15;
+  grid-area: 2/7/7/15;
   position: relative;
 
   p {
-    font-size: 0.7em;
+    font-size: 0.9em;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  p:hover {
-    font-size: 0.9em;
-    overflow: visible;
-    white-space: normal;
   }
 }
 .included-wrapper {
-  grid-area: 6/1/8/7;
+  grid-area: 5/1/7/7;
   display: grid;
 
   .included-services {
@@ -315,37 +325,16 @@ export default defineComponent({
   }
 }
 .styling-services-wrapper {
-  grid-area: 9/1/13/15;
+  grid-area: 7/1/11/15;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  > div {
-    border: 1px solid var(--color-text-main);
-  }
   > div:nth-child(1n + 1) {
     border-right: none;
-  }
-  > div:nth-child(6) {
-    border-right: 1px solid var(--color-text-main);
   }
 
   @media screen and (max-width: 767px) {
     > div {
-      border: 1px solid black;
-    }
-    > div:nth-child(3n + 1) {
-      border-left: none;
-    }
-    > div:nth-child(1),
-    div:nth-child(2),
-    div:nth-child(3) {
-      border-top: none;
-    }
-    > div:nth-child(1n + 1) {
-      border-right: none;
-      border-bottom: none;
-    }
-    > div:nth-child(6) {
-      border-right: none;
+      border: none;
     }
   }
 }

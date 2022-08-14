@@ -21,13 +21,21 @@ export default defineComponent({
 .service-child-text {
   font-size: var(--font-size-sm);
   text-align: center;
+}
 
-  @media screen and (max-width: 768px) {
-    font-size: 0.9em;
+@media screen and (max-width: 768px) {
+  .service-child-text {
+    font-size: var(--font-size-sm);
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: hidden;
     overflow: hidden;
     padding: 0.5em;
+  }
+  .service-child-text:hover {
+    font-size: var(--font-size-sm);
+    overflow: visible;
+    text-overflow: ellipsis;
+    white-space: normal;
   }
 }
 </style>

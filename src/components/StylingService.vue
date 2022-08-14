@@ -47,7 +47,7 @@ export default defineComponent({
   display: grid;
   > h3 {
     justify-self: center;
-    color: var(--color-text-main);
+    color: var(--color-text-sub);
     height: fit-content;
     align-self: center;
   }
@@ -55,22 +55,12 @@ export default defineComponent({
   @media screen and (max-width: 767px) {
     grid-template-rows: 0.1fr 1fr;
     > h3 {
-      font-size: var(--font-size-sm);
+      font-size: var(--font-size-base);
     }
   }
 }
 
 .service-child-wrapper {
   display: grid;
-
-  > div:nth-child(1n + 1) {
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
-  }
-
-  > div {
-    border: 1px solid var(--color-text-main);
-  }
 }
 </style>

@@ -17,7 +17,7 @@ export default defineComponent({
 </template>
 <style lang="scss" scoped>
 .container {
-  background-color: var(--homepage-gradient-one);
+  background: radial-gradient(50% 50% at 50% 50%, #1d1e46 0%, #13132d 100%);
   display: grid;
   justify-items: center;
   padding: 4em 0;

@@ -44,5 +44,12 @@ const userReviews = [
   },
   { reviewer: "Robert Downey Jr.", text: "Keep going! Never give up!!" },
 ];
-const keys = ["committed", "devoted", "faithful", "accustomed", "dedicated"];
-export { pcd, userReviews, keys };
+const keys = ["Committed", "Accustomed", "Faithful", "Devoted", "Dedicated"];
+const sentences = [
+  " creating stories",
+  " pleasing our guests",
+  " our companions",
+  " only delivering our best",
+  " yours as if they were ours",
+];
+export { pcd, userReviews, keys, sentences };

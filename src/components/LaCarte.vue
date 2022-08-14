@@ -34,5 +34,9 @@ export default defineComponent({
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr;
   align-items: center;
+
+  > span {
+    font-weight: 500;
+  }
 }
 </style>

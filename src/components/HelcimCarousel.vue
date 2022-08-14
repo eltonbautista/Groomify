@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { keys, userReviews } from "../data/data-abstracted";
+import { keys, sentences, userReviews } from "../data/data-abstracted";
 
 import HelcimCard from "./HelcimCard.vue";
 export default defineComponent({
@@ -12,6 +12,7 @@ export default defineComponent({
       right: 3,
       reviews: userReviews,
       keywords: keys,
+      keySentences: sentences,
       styleLeft: "left",
       styleMiddle: "middle",
       styleRight: "right",
@@ -61,9 +62,9 @@ export default defineComponent({
   <div class="carousel-wrapper">
     <h1>
       <span
-        >We're <em>{{ keywords[count] }} </em></span
-      >
-      <span> to creating stories</span>
+        ><em>{{ keywords[count] }} </em>
+      </span>
+      <span> to {{ keySentences[count] }}</span>
     </h1>
     <HelcimCard
       :reviewer="reviews[left].reviewer"
@@ -109,7 +110,7 @@ export default defineComponent({
       font-weight: 600;
     }
     em {
-      color: var(--color-text-sub);
+      color: var(--homepage-gradient-one);
       font-weight: 800;
     }
   }
@@ -133,7 +134,7 @@ export default defineComponent({
       background: none;
       border: none;
       font-size: var(--font-size-lg);
-      color: var(--color-text-sub);
+      color: var(--homepage-gradient-one);
     }
   }
 
