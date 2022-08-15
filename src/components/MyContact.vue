@@ -15,7 +15,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="container">
+  <section class="container" id="Contact">
     <div class="contact">
       <div class="contact-image">
         <img :src="dog" />

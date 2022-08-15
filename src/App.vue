@@ -1,3 +1,4 @@
+<!-- eslint-disable @typescript-eslint/ban-ts-comment -->
 <script lang="ts">
 import { defineComponent } from "vue";
 import TheNav from "./components/TheNav.vue";
@@ -8,9 +9,32 @@ export default defineComponent({
   data() {
     return {
       wScroll: window.scrollY,
-      oldScroll: window.scrollY,
-      scrollBool: false,
       navClass: "",
+      observer: new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting === true) {
+              if (entry.target.id === "Hero") {
+                // @ts-ignore comment
+                this.navClass = "none" as string;
+              } else if (entry.target.id === "About") {
+                // @ts-ignore comment
+                this.navClass = "pink" as string;
+              } else if (entry.target.id === "Pricing") {
+                // @ts-ignore comment
+                this.navClass = "purple";
+              } else if (entry.target.id === "Feedback") {
+                // @ts-ignore comment
+                this.navClass = "white";
+              } else if (entry.target.id === "Contact") {
+                // @ts-ignore comment
+                this.navClass = "yellow";
+              }
+            }
+          });
+        },
+        { threshold: [0.8] }
+      ),
     };
   },
   created() {
@@ -21,13 +45,20 @@ export default defineComponent({
   },
   methods: {
     handleScroll() {
+      // must always be active during scroll
       this.wScroll = window.scrollY;
-      if (this.wScroll > this.oldScroll) {
-        this.navClass = "hide";
-      } else {
-        this.navClass = "";
+      if (window.matchMedia("(min-width: 769px)").matches && this.wScroll > 0) {
+        this.observer.observe(document.querySelector("#Hero") as Element);
+        this.observer.observe(document.querySelector("#About") as Element);
+        this.observer.observe(document.querySelector("#Pricing") as Element);
+        this.observer.observe(document.querySelector("#Feedback") as Element);
+        this.observer.observe(document.querySelector("#Contact") as Element);
+      } else if (
+        this.wScroll === 0 &&
+        window.matchMedia("(min-width: 769px)").matches
+      ) {
+        this.navClass = "none";
       }
-      this.oldScroll = this.wScroll <= 0 ? 0 : this.wScroll;
     },
   },
 });
@@ -49,20 +80,44 @@ export default defineComponent({
 }
 header {
   background: none;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 5;
-  background: var(--bg-color-v1);
   opacity: 1;
-  transition: transform 100ms ease-in-out, opacity 200ms ease-in-out;
   transition-delay: 0ms;
-  transform: translateY(0%);
+
+  @media (max-width: 768px) {
+    background: var(--bg-color-v1);
+  }
 }
 
-.hide {
-  opacity: 0;
-  transition: transform 100ms ease-in-out, opacity 200ms ease-in-out;
-  transition-delay: 0ms;
-  transform: translateY(-100%);
+header,
+.none,
+.pink,
+.purple,
+.white,
+.yellow {
+  transition: all 200ms ease-in-out;
+}
+
+.none {
+  background: none;
+}
+
+.pink {
+  background-color: var(--bg-color-v1);
+}
+
+.purple {
+  background-color: #13132d;
+}
+
+.white {
+  background-color: var(--homepage-gradient-one);
+}
+
+.yellow {
+  background-color: var(--homepage-gradient-four);
 }
 </style>

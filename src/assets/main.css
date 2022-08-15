@@ -62,7 +62,7 @@ a:hover {
 #Groomify {
   min-width: 100%;
   min-height: 100%;
-  background-color: var(--bg-color-v1);
+  background: linear-gradient(296.37deg, #FFD494 6.69%, rgba(255, 190, 169, 0) 33.83%),linear-gradient(129.1deg, #EA8EA4 -1.7%, rgba(253, 229, 178, 0) 72.42%),linear-gradient(26.22deg, #7735E4 2.78%, #DA70A9 30.98%, #F3C690 53.17%);
 }
 
 #root,

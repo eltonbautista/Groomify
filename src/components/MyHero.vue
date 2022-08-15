@@ -9,7 +9,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="container">
+  <section id="Hero" class="container">
     <div class="hero">
       <div class="main-headline-text">
         <h1>
@@ -54,12 +54,19 @@ export default defineComponent({
 <style lang="scss" scoped>
 .container {
   background-color: var(--bg-color-v1);
+  padding-top: 80px;
+  background: linear-gradient(
+      296.37deg,
+      #ffd494 6.69%,
+      rgba(255, 190, 169, 0) 33.83%
+    ),
+    linear-gradient(129.1deg, #ea8ea4 -1.7%, rgba(253, 229, 178, 0) 72.42%),
+    linear-gradient(26.22deg, #7735e4 2.78%, #da70a9 30.98%, #f3c690 53.17%);
   width: 100%;
 }
 
 .hero {
   padding-top: 3em;
-  background-color: var(--bg-color-v1);
   max-width: var(--max-width);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
