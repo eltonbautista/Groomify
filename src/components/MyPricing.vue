@@ -105,7 +105,7 @@ export default defineComponent({
 .grid {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   max-width: var(--max-width);
   gap: 1em;
   padding-bottom: 5em;
@@ -127,7 +127,8 @@ export default defineComponent({
 .banner {
   display: grid;
   grid-area: 1/1/2/14;
-  margin-top: 2em;
+  /* margin-top: 2em; */
+  padding-bottom: 3em;
 
   @media screen and (max-width: 768px) {
     grid-area: 1/2/2/8;

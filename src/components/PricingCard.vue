@@ -99,7 +99,7 @@ export default defineComponent({
 }
 
 .small {
-  grid-area: 3/2/7/6;
+  grid-area: 2/2/6/6;
 
   @media screen and (min-width: 481px) and (max-width: 768px) {
     grid-area: 2/2/2/8;
@@ -110,7 +110,7 @@ export default defineComponent({
 }
 
 .medium {
-  grid-area: 3/6/7/10;
+  grid-area: 2/6/6/10;
 
   @media screen and (min-width: 481px) and (max-width: 768px) {
     grid-area: 3/2/3/8;
@@ -121,7 +121,7 @@ export default defineComponent({
 }
 
 .large {
-  grid-area: 3/10/7/14;
+  grid-area: 2/10/6/14;
 
   @media screen and (max-width: 768px) {
     grid-area: 4/2/5/8;
