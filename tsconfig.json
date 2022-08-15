@@ -1,5 +1,11 @@
 {
   "files": [],
+  "compilerOptions": {
+    "types": ["node"],
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+  },
   "references": [
     {
       "path": "./tsconfig.config.json"

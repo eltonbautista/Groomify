@@ -155,7 +155,7 @@ export default defineComponent({
   justify-items: center;
   grid-area: 2/1/7/15;
   margin-top: 3em;
-  z-index: 5;
+  z-index: 2;
   border: 3px solid black;
   border-radius: 1em;
   padding: 1em;

@@ -2,7 +2,7 @@
 import { defineComponent } from "vue";
 import MainButton from "./MainButton.vue";
 
-interface IBreeds {
+export interface IBreeds {
   dogSize: string;
   price: string;
   breeds: {

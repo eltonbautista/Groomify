@@ -1,4 +1,6 @@
-const pcd = [
+import type { IBreeds } from "../components/PricingCard.vue";
+
+const pcd: IBreeds[] = [
   {
     dogSize: "Small",
     breeds: {
