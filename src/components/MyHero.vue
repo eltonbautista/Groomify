@@ -9,7 +9,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section id="Home Groomify" class="container">
+  <section class="container">
     <div class="hero">
       <div class="main-headline-text">
         <h1>

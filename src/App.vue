@@ -20,11 +20,8 @@ export default defineComponent({
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll(event) {
+    handleScroll() {
       this.wScroll = window.scrollY;
-
-      console.log(this.$el.querySelector("#About"));
-
       if (this.wScroll > this.oldScroll) {
         this.navClass = "hide";
       } else {
@@ -37,20 +34,35 @@ export default defineComponent({
 </script>
 
 <template>
-  <header>
+  <div id="Home"></div>
+  <header :class="`${navClass}`">
     <div class="wrapper">
-      <TheNav :class="`${navClass}`" />
+      <TheNav />
     </div>
   </header>
 
   <RouterView />
 </template>
 <style lang="scss" scoped>
+#Home {
+  visibility: hidden;
+}
 header {
   background: none;
   position: sticky;
   top: 0;
   z-index: 5;
   background: var(--bg-color-v1);
+  opacity: 1;
+  transition: transform 100ms ease-in-out, opacity 200ms ease-in-out;
+  transition-delay: 0ms;
+  transform: translateY(0%);
+}
+
+.hide {
+  opacity: 0;
+  transition: transform 100ms ease-in-out, opacity 200ms ease-in-out;
+  transition-delay: 0ms;
+  transform: translateY(-100%);
 }
 </style>

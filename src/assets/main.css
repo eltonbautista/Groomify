@@ -59,10 +59,10 @@ a:hover {
   cursor: pointer;
 }
 
-/* Gotta play with this */
-#app {
+#Groomify {
   min-width: 100%;
   min-height: 100%;
+  background-color: var(--bg-color-v1);
 }
 
 #root,

@@ -17,4 +17,4 @@ app.config.errorHandler = (err: unknown) => {
   console.log(err);
 };
 
-app.mount("#app");
+app.mount("#Groomify");
