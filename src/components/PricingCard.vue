@@ -42,7 +42,7 @@ export default defineComponent({
 <template>
   <div class="price-display-wrap" :style="cssProps">
     <div class="display-image">
-      <img :src="imgSrc" />
+      <img :src="imgSrc" height="200" width="500" />
     </div>
     <div class="dog-size-wrap">
       <h2 class="size-adjective">{{ displayInformation.dogSize }}</h2>

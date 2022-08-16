@@ -18,7 +18,7 @@ export default defineComponent({
   <section class="container" id="Contact">
     <div class="contact">
       <div class="contact-image">
-        <img :src="dog" />
+        <img :src="dog" height="200" width="500" />
       </div>
       <div class="contact-text">
         <div class="header">

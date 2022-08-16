@@ -45,7 +45,7 @@ export default defineComponent({
       <div class="about-img">
         <div class="backdrop"></div>
         <div class="image">
-          <img :src="dog" />
+          <img :src="dog" height="200" width="500" />
         </div>
       </div>
     </div>
