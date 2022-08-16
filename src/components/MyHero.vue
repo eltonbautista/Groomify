@@ -13,11 +13,11 @@ export default defineComponent({
     <div class="hero">
       <div class="main-headline-text">
         <h1>
-          <span><em>Woof</em> there ever be a</span>
-          <span> better time than <em>m</em></span>
-          <span><em>eow?</em> <em>Grrrive</em> them a</span>
+          <span><em>Woof</em> there ever be </span>
+          <span> a better time than </span>
+          <span><em>meow?</em> <em>Grrrive</em> them a</span>
           <span> <em> scents</em> of</span>
-          <span> liberty. They <em>arf</em> man's</span>
+          <span> freedom. They <em>arf</em> man's</span>
           <span> <em> best friend</em> after all!</span>
         </h1>
         <p>
@@ -26,8 +26,8 @@ export default defineComponent({
             be receiving the best of the best.</span
           >
           <span
-            >&nbsp;<em>Pup</em> down to our many <em>Calgary</em> parlors now,
-            or inquire about our <em>mobile</em> service!
+            >&nbsp;<em>Pup</em> down to our any of our <em>Calgary</em> parlours
+            now, or inquire about our <em>mobile</em> service!
           </span>
         </p>
         <div class="headline-buttons-wrap">
@@ -79,42 +79,40 @@ export default defineComponent({
 
   .main-headline-text {
     grid-area: 1/1/2/6;
-  }
-
-  .main-headline-text em {
-    color: var(--color-text-sub);
-    font-weight: 500;
-  }
-
-  .main-headline-text > h1 {
-    padding-bottom: 1.5em;
-  }
-
-  .main-headline-text > h1 > span {
-    font-size: var(--font-size-xl);
-    box-sizing: border-box;
-    letter-spacing: 0.025em;
-    line-height: 1.2;
-    font-weight: 500;
-  }
-
-  .main-headline-text > p {
-    padding-bottom: 2em;
-  }
-
-  .main-headline-text > p > span {
-    font-size: var(--font-size-base);
+    em {
+      color: var(--color-text-sub);
+      font-weight: 500;
+    }
+    > h1 {
+      padding-bottom: 1.5em;
+      > span {
+        font-size: var(--font-size-xl);
+        box-sizing: border-box;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+        font-weight: 500;
+      }
+      > span:nth-child(2),
+      > span:last-of-type {
+        letter-spacing: 0.075em;
+      }
+    }
+    > p {
+      padding-bottom: 2em;
+      > span {
+        font-size: var(--font-size-base);
+      }
+    }
   }
 
   .headline-buttons-wrap {
     display: grid;
-  }
-
-  .headline-buttons-wrap > div {
-    display: grid;
-    width: 75%;
-    gap: 0.5em;
-    justify-self: center;
+    > div {
+      display: grid;
+      width: 75%;
+      gap: 0.5em;
+      justify-self: center;
+    }
   }
 
   .hero-image {
@@ -160,6 +158,23 @@ export default defineComponent({
 
     .main-headline-text {
       grid-area: 1/2/2/8;
+
+      > h1 {
+        > span:first-of-type {
+          letter-spacing: 0.01em;
+          font-size: calc(var(--font-size-xl) + 0.175em);
+        }
+        > span:nth-child(2) {
+          letter-spacing: 0.15em;
+          font-size: calc(var(--font-size-xl) + 0.175em);
+        }
+        > span:nth-child(1n + 3) {
+          letter-spacing: 0.08em;
+        }
+        > span:last-of-type {
+          font-size: calc(var(--font-size-xl) + 0.2em);
+        }
+      }
     }
 
     .hero-image {
@@ -196,8 +211,35 @@ export default defineComponent({
   @media screen and (min-width: 320px) and (max-width: 767px) {
     padding-bottom: 0em;
 
-    .main-headline-text > h1 > span {
-      font-size: var(--font-size-xl);
+    .main-headline-text {
+      > h1 {
+        > span:first-of-type {
+          letter-spacing: 0.026em;
+          font-size: calc(var(--font-size-xl) + 0.3em);
+        }
+        > span:nth-child(2) {
+          letter-spacing: 0.01em;
+          font-size: calc(var(--font-size-xl) + 0.34em);
+        }
+        > span:nth-child(1n + 3) {
+          letter-spacing: 0em;
+          font-size: calc(var(--font-size-xl) + 0.35em);
+        }
+        > span:nth-child(3) {
+          font-size: calc(var(--font-size-xl) + 0.2em);
+        }
+        > span:nth-child(4) {
+          letter-spacing: 0.05em;
+        }
+        > span:nth-child(5) {
+          letter-spacing: 0em;
+          font-size: calc(var(--font-size-xl) - 0.1em);
+        }
+        > span:nth-child(6) {
+          letter-spacing: 0em;
+          font-size: calc(var(--font-size-xl) - 0.1em);
+        }
+      }
     }
 
     .main-headline-image {
@@ -206,7 +248,7 @@ export default defineComponent({
     }
 
     .main-headline-text > p > span {
-      font-size: var(--font-size-base);
+      font-size: calc(var(--font-size-lg) - 0.25em);
     }
 
     .headline-buttons-wrap > div {

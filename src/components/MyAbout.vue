@@ -23,8 +23,8 @@ export default defineComponent({
       <div class="about-text">
         <div class="top">
           <p>
-            Here at <em>Groomify</em> we take <em>pride</em> in our professional
-            experts who focus on gentleness and service.
+            Here at <em>Groomify</em> we take <em>pride</em> in our
+            professionals who focus on gentleness and service.
           </p>
         </div>
         <div class="bottom">
@@ -82,6 +82,15 @@ export default defineComponent({
       "text";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+
+    .about-text {
+      .top {
+        > p {
+          font-size: calc(var(--font-size-xl) - 0.34em);
+          letter-spacing: 0.01em;
+        }
+      }
+    }
   }
 }
 
