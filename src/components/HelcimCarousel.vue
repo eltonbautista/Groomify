@@ -13,9 +13,7 @@ export default defineComponent({
       reviews: userReviews,
       keywords: keys,
       keySentences: sentences,
-      styleLeft: "left",
-      styleMiddle: "middle",
-      styleRight: "right",
+      styleAlt: "",
     };
   },
   methods: {
@@ -43,16 +41,7 @@ export default defineComponent({
         this.count = this.cards.length - 1;
         this.left = this.count - 1;
       }
-      this.styleLeft === "left"
-        ? (this.styleLeft = "leftAlt")
-        : (this.styleLeft = "left");
-      this.styleMiddle === "middle"
-        ? (this.styleMiddle = "middleAlt")
-        : (this.styleMiddle = "middle");
-
-      this.styleRight === "right"
-        ? (this.styleRight = "rightAlt")
-        : (this.styleRight = "right");
+      this.styleAlt === "" ? (this.styleAlt = "alt") : (this.styleAlt = "");
     },
   },
   components: { HelcimCard },
@@ -69,17 +58,17 @@ export default defineComponent({
     <HelcimCard
       :reviewer="reviews[left].reviewer"
       :text="reviews[left].text"
-      :class="styleLeft"
+      :class="styleAlt"
     />
     <HelcimCard
       :reviewer="reviews[count].reviewer"
       :text="reviews[count].text"
-      :class="styleMiddle"
+      :class="styleAlt"
     />
     <HelcimCard
       :reviewer="reviews[right].reviewer"
       :text="reviews[right].text"
-      :class="styleRight"
+      :class="styleAlt"
     />
     <div class="button-wrap">
       <button @click="carousel('previous')" type="button">Previous</button>
@@ -98,6 +87,10 @@ export default defineComponent({
   padding: 2em;
   position: relative;
 
+  @media screen and (max-width: 1024px) {
+    gap: 1em;
+  }
+
   > h1 {
     grid-area: 1/4/1/11;
     color: var(--color-text-accent-v2);
@@ -114,27 +107,67 @@ export default defineComponent({
       font-weight: 800;
     }
   }
-
+  /* SIDE CARDS */
   > div:nth-child(2) {
     grid-area: 2/1/2/5;
   }
-  > div:nth-child(3) {
-    grid-area: 2/5/2/9;
-  }
   > div:nth-child(4) {
     grid-area: 2/9/2/13;
+  }
+  > div:nth-child(2),
+  > div:nth-child(4) {
+    transition: 200ms ease-in-out transform, 200ms ease-in opacity;
+    transition-delay: 0ms;
+    opacity: 1;
+    transform: scale(0.9);
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  > div:nth-child(2).alt,
+  div:nth-child(4).alt {
+    transition: 200ms ease-in-out transform, 200ms ease-in opacity;
+    transition-delay: 0ms;
+    opacity: 0;
+  }
+
+  > div:nth-child(2).alt {
+    transform: scale(0.9) translate(100%);
+  }
+
+  > div:nth-child(4).alt {
+    transform: scale(0.9) translate(-100%);
+  }
+
+  /* MIDDLE CARD */
+  > div:nth-child(3) {
+    grid-area: 2/5/2/9;
+    transition: 300ms ease-in-out all;
+    transition-delay: 0ms;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  > div:nth-child(3).alt {
+    transition: 300ms ease-in-out all;
+    opacity: 1;
+    transform: scale(1);
+    background: none;
+    color: var(--color-text-sub);
   }
 
   .button-wrap {
     display: grid;
     grid-auto-flow: column;
     grid-area: 3/5/3/9;
+    margin-top: 2em;
 
     > button {
       background: none;
       border: none;
       font-size: var(--font-size-lg);
-      color: var(--homepage-gradient-one);
+      color: var(--homepage-gradient-four);
     }
   }
 

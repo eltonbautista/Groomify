@@ -48,76 +48,23 @@ export default defineComponent({
     }
     > h3,
     p {
-      width: 200px;
-      color: var(--color-text-sub);
+      width: 220px;
+      color: var(--homepage-gradient-four);
+      padding: 0.5em;
     }
 
     @media screen and (max-width: 1024px) {
       > h1 {
         font-size: var(--font-size-sm);
       }
-
       > h3 {
         font-size: var(--font-size-sm);
       }
       > p {
+        width: 160px;
         font-size: var(--font-size-base);
       }
     }
   }
-}
-
-@media screen and (max-width: 767px) {
-  .left,
-  .leftAlt,
-  .right,
-  .rightAlt {
-    display: none;
-  }
-}
-
-.middle {
-  transition: 300ms ease-in-out all;
-  transition-delay: 0ms;
-  transform: scale(1.1);
-  opacity: 1;
-  /* background: #b191e7; */
-}
-
-.middleAlt {
-  transition: 300ms ease-in-out all;
-  opacity: 1;
-  transform: scale(1);
-  /* background-color: var(--homepage-gradient-one); */
-  background: none;
-  color: var(--color-text-sub);
-}
-
-.left {
-  transition: 200ms ease-in-out transform, 200ms ease-in opacity;
-  transition-delay: 0ms;
-  opacity: 1;
-  transform: scale(0.9);
-}
-
-.leftAlt {
-  transition: 200ms ease-in-out transform, 200ms ease-in opacity;
-  transition-delay: 0ms;
-  transform: scale(0.9) translate(100%);
-  opacity: 0;
-}
-
-.right {
-  transition: 200ms ease-in-out transform, 200ms ease-in opacity;
-  transition-delay: 0ms;
-  opacity: 1;
-  transform: scale(0.9);
-}
-
-.rightAlt {
-  transition: 200ms ease-in transform, 200ms ease-in opacity;
-  transition-delay: 0ms;
-  transform: scale(0.9) translate(-100%);
-  opacity: 0;
 }
 </style>
