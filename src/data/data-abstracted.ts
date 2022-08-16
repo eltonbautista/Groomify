@@ -42,14 +42,17 @@ const userReviews = [
   },
   {
     reviewer: "Elton Bautista",
-    text: "I love these guys' energy!!",
+    text: "Amazing professional and gentle approach, from matted to clean and neat!",
   },
-  { reviewer: "Robert Downey Jr.", text: "Keep going! Never give up!!" },
+  {
+    reviewer: "Robert Downey Jr.",
+    text: "Groomify taught me how to transform myself, never give up!!",
+  },
 ];
 const keys = ["Committed", "Accustomed", "Faithful", "Devoted", "Dedicated"];
 const sentences = [
   " creating stories",
-  " pleasing our guests",
+  " pleasing our clients",
   " our companions",
   " only delivering our best",
   " yours as if they were ours",

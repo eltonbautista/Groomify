@@ -17,15 +17,18 @@ export default defineComponent({
           <span> better time than <em>m</em></span>
           <span><em>eow?</em> <em>Grrrive</em> them a</span>
           <span> <em> scents</em> of</span>
-          <span> liberty. They <em>arf</em> yo</span>
-          <span>ur best friend after all!</span>
+          <span> liberty. They <em>arf</em> man's</span>
+          <span> <em> best friend</em> after all!</span>
         </h1>
         <p>
           <span
             >We are not <em>kitten</em> you when we say your furry friends will
             be receiving the best of the best.</span
           >
-          <span>&nbsp;<em>Pup</em> down to our locations now! </span>
+          <span
+            >&nbsp;<em>Pup</em> down to our many <em>Calgary</em> parlors now,
+            or inquire about our <em>mobile</em> service!
+          </span>
         </p>
         <div class="headline-buttons-wrap">
           <div>
@@ -133,14 +136,14 @@ export default defineComponent({
   }
 
   .accent-one {
-    grid-area: 1/4/8/8;
+    grid-area: 1/4/10/8;
     background-color: var(--bg-color-about);
     margin-top: 1em;
     height: 92.5%;
   }
 
   .accent-two {
-    grid-area: 1/4/8/9;
+    grid-area: 1/4/10/9;
     border: 1px solid black;
     border-left: none;
     margin-top: 0.25em;
@@ -164,8 +167,8 @@ export default defineComponent({
     }
 
     .main-headline-image {
-      grid-area: 1/2/13/9;
-      background-size: 75%;
+      grid-area: 1/2/11/7;
+      background-size: 95%;
     }
 
     .main-headline-text > p > span {
@@ -178,12 +181,13 @@ export default defineComponent({
     }
 
     .accent-one {
-      grid-area: 1/3/12/7;
+      grid-area: 1/4/11/7;
       margin-top: 2.5em;
+      margin-right: 3em;
     }
 
     .accent-two {
-      grid-area: 1/4/13/8;
+      grid-area: 1/4/12/7;
       height: 95%;
     }
   }

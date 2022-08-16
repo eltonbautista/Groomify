@@ -23,14 +23,14 @@ export default defineComponent({
       <div class="about-text">
         <div class="top">
           <p>
-            Here at <em>Groomify</em> we take <em>pride</em> in the work that we
-            do.
+            Here at <em>Groomify</em> we take <em>pride</em> in our professional
+            experts who focus on gentleness and service.
           </p>
         </div>
         <div class="bottom">
           <p>
-            We’re pet owners, so we know how important your furry friends are to
-            you - trust us when we say; they’re important to us too.
+            We’re pet owners, so we know how important your little guy/girl is
+            to you - trust us when we say; they’re important to us too.
           </p>
         </div>
 

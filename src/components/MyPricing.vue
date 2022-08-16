@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import shihtzu from "../assets/shih-tzu.png";
-import husky from "../assets/contact-dog.png";
+import husky from "../assets/packer.png";
 import golden from "../assets/golden.png";
 import PricingModal from "./PricingModal.vue";
 import PricingCard from "./PricingCard.vue";
