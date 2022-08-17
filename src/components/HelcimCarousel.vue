@@ -168,6 +168,13 @@ export default defineComponent({
       border: none;
       font-size: var(--font-size-lg);
       color: var(--homepage-gradient-four);
+
+      &:hover {
+        color: var(--color-text-sub);
+      }
+      &:active {
+        transform: translateY(4px);
+      }
     }
   }
 

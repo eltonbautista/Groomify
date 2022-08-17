@@ -1,7 +1,18 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import MainButton from "./MainButton.vue";
+import heroImgBig from "../assets/hero-dog-1222.png";
+import heroImgMed from "../assets/hero-dog-761.png";
+import heroImgSm from "../assets/hero-dog-398.png";
+
 export default defineComponent({
+  data() {
+    return {
+      heroImgBig: heroImgBig,
+      heroImgMed: heroImgMed,
+      heroImgSm: heroImgSm,
+    };
+  },
   components: {
     MainButton,
   },
@@ -46,7 +57,14 @@ export default defineComponent({
         </div>
       </div>
       <div class="hero-image">
-        <div class="main-headline-image"></div>
+        <div class="main-headline-image">
+          <img
+            :src="heroImgBig"
+            alt="hero-doggo"
+            sizes="(max-width: 1400px) 100vw, 1400px"
+            :srcset="`${heroImgBig} 1222w, ${heroImgMed} 761w, ${heroImgSm} 398w`"
+          />
+        </div>
         <div class="accent-one"></div>
         <div class="accent-two"></div>
       </div>
@@ -125,10 +143,6 @@ export default defineComponent({
   .main-headline-image {
     max-width: 100%;
     min-height: 100%;
-    background-image: url("../assets/hero-dog.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 0 -1em;
     z-index: 1;
     grid-area: 1/1/10/9;
   }
@@ -154,7 +168,7 @@ export default defineComponent({
 
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
 
     .main-headline-text {
       grid-area: 1/2/2/8;
@@ -255,12 +269,12 @@ export default defineComponent({
       width: 60%;
     }
     .accent-one {
-      grid-area: 1/4/9/8;
+      grid-area: 1/4/12/9;
       margin-left: 1em;
     }
 
     .accent-two {
-      grid-area: 1/5/10/9;
+      grid-area: 1/5/13/9;
       max-width: 85%;
     }
   }
