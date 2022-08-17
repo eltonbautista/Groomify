@@ -16,7 +16,7 @@ export default defineComponent({
 
 <template>
   <section id="About" class="container">
-    <div class="about">
+    <div class="about grid">
       <div class="about-header">
         <h1>Who&nbsp;<em>we</em>&nbsp;are</h1>
       </div>
@@ -63,7 +63,6 @@ export default defineComponent({
 }
 
 .about {
-  max-width: var(--max-width);
   margin: auto;
   display: grid;
   grid-template-areas:

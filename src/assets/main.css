@@ -88,3 +88,7 @@ a,
 .service-wrapper:nth-child(1n + 2)>div>div>p::before {
   content: "$";
 }
+
+.grid {
+  max-width: var(--max-width);
+}

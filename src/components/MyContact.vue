@@ -16,7 +16,7 @@ export default defineComponent({
 
 <template>
   <section class="container" id="Contact">
-    <div class="contact">
+    <div class="contact grid">
       <div class="contact-image">
         <img :src="dog" height="200" width="500" />
       </div>
@@ -64,10 +64,9 @@ export default defineComponent({
   background-color: var(--bg-color-about);
   font-family: var(--common-font-family);
   padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding-bottom: 1rem;
 }
 .contact {
-  max-width: var(--max-width);
   margin: auto;
   display: grid;
   grid-template-areas: "image text";

@@ -23,7 +23,6 @@ export default defineComponent({
   padding: 4em 0;
 }
 .grid {
-  max-width: var(--max-width);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto repeat(2, 1fr);

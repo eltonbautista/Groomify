@@ -21,7 +21,7 @@ export default defineComponent({
 
 <template>
   <section id="Hero" class="container">
-    <div class="hero">
+    <div class="hero grid">
       <div class="main-headline-text">
         <h1>
           <span><em>Woof</em> there ever be </span>
@@ -88,7 +88,6 @@ export default defineComponent({
 
 .hero {
   padding-top: 3em;
-  max-width: var(--max-width);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin: auto;
