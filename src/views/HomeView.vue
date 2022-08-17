@@ -4,6 +4,7 @@ import MyAbout from "../components/MyAbout.vue";
 import MyContact from "../components/MyContact.vue";
 import MyPricing from "../components/MyPricing.vue";
 import MyFeedback from "../components/MyFeedback.vue";
+import MyFooter from "../components/MyFooter.vue";
 </script>
 <template>
   <main>
@@ -12,6 +13,7 @@ import MyFeedback from "../components/MyFeedback.vue";
     <MyPricing />
     <MyFeedback />
     <MyContact />
+    <MyFooter />
   </main>
 </template>
 
