@@ -96,7 +96,7 @@ export default defineComponent({
     color: var(--color-text-accent-v2);
     font-weight: 600;
     line-height: 1.1;
-    height: 250px;
+    height: 150px;
 
     * {
       font-size: var(--font-size-xxl);
@@ -121,7 +121,7 @@ export default defineComponent({
     opacity: 1;
     transform: scale(0.9);
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 968px) {
       display: none;
     }
   }
@@ -178,14 +178,18 @@ export default defineComponent({
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 968px) {
     grid-template-columns: 1fr;
     > h1 {
       grid-area: 1/1/1/2;
-      height: 10em;
+      /* height: 10em; */
+      margin-bottom: 1em;
     }
     > div:nth-child(3) {
       grid-area: 2/1/2/2;
+      width: 80%;
+      justify-self: center;
+      max-width: 300px;
     }
     .button-wrap {
       grid-area: 3/1/3/2;

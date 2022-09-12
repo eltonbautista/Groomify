@@ -61,8 +61,8 @@ export default defineComponent({
         font-size: var(--font-size-sm);
       }
       > p {
-        width: 160px;
-        font-size: var(--font-size-base);
+        /* width: 160px; */
+        font-size: var(--font-size-lg);
       }
     }
   }

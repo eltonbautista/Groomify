@@ -105,13 +105,8 @@ export default defineComponent({
       > span {
         font-size: var(--font-size-xl);
         box-sizing: border-box;
-        letter-spacing: 0.03em;
         line-height: 1.2;
         font-weight: 500;
-      }
-      > span:nth-child(2),
-      > span:last-of-type {
-        letter-spacing: 0.075em;
       }
     }
     > p {
@@ -172,7 +167,7 @@ export default defineComponent({
     .main-headline-text {
       grid-area: 1/2/2/8;
 
-      > h1 {
+      /* > h1 {
         > span:first-of-type {
           letter-spacing: 0.01em;
           font-size: calc(var(--font-size-xl) + 0.175em);
@@ -187,7 +182,7 @@ export default defineComponent({
         > span:last-of-type {
           font-size: calc(var(--font-size-xl) + 0.2em);
         }
-      }
+      } */
     }
 
     .hero-image {
@@ -224,7 +219,7 @@ export default defineComponent({
   @media screen and (min-width: 320px) and (max-width: 767px) {
     padding-bottom: 0em;
 
-    .main-headline-text {
+    /* .main-headline-text {
       > h1 {
         > span:first-of-type {
           letter-spacing: 0.026em;
@@ -253,7 +248,7 @@ export default defineComponent({
           font-size: calc(var(--font-size-xl) - 0.1em);
         }
       }
-    }
+    } */
 
     .main-headline-image {
       grid-area: 1/1/13/9;

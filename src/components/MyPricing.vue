@@ -132,7 +132,7 @@ export default defineComponent({
 
   @media screen and (max-width: 768px) {
     grid-area: 1/2/2/8;
-    margin-bottom: 5em;
+    /* margin-bottom: 5em; */
   }
 
   > h1 {
@@ -149,6 +149,7 @@ export default defineComponent({
     @media screen and (max-width: 768px) {
       display: grid;
       justify-items: center;
+      line-height: 1.2;
     }
 
     > em {
